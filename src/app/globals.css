@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+
+@import "tailwindcss";
+@source "../**/*.{ts,tsx}";
+
+:root {
+  --walnut: #102A43;
+  --walnut-2: #163A52;
+  --saffron: #F2D24E;
+  --saffron-light: #F7E07A;
+  --dal: #F2D24E;
+  --dal-light: #F7E07A;
+  --sienna: #F2D24E;
+  --cream: #F5F9FD;
+  --cream-dark: #C9D9E8;
+  --umber: #6E879E;
+  --umber-light: #9DB2C7;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--walnut);
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── Cursor ─────────────────────────────── */
+.cursor-dot {
+  width: 8px; height: 8px;
+  background: var(--saffron);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease;
+}
+
+.cursor-ring {
+  width: 38px; height: 38px;
+  border: 1.5px solid rgba(242,210,78,0.7);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.cursor-ring.hovering {
+  width: 64px; height: 64px;
+  background: rgba(242,210,78,0.08);
+  border-color: var(--saffron-light);
+}
+
+/* ── Scrollbar ──────────────────────────── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--walnut); }
+::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 2px; }
+
+::selection { background: var(--saffron); color: var(--walnut); }
+
+/* ── Fonts ──────────────────────────────── */
+.font-clash { font-family: 'Clash Display', 'Inter', sans-serif; }
+.font-cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+/* ── Marquee ────────────────────────────── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 28s linear infinite;
+  white-space: nowrap;
+  display: inline-flex;
+}
+.marquee-track-reverse {
+  animation: marquee 28s linear infinite reverse;
+  white-space: nowrap;
+  display: inline-flex;
+}
+
+/* ── Chinar leaves ──────────────────────── */
+@keyframes leafFall {
+  0%   { transform: translateY(-10%) rotate(0deg)   translateX(0px);  opacity: 0; }
+  5%   { opacity: 0.55; }
+  90%  { opacity: 0.3; }
+  100% { transform: translateY(110vh) rotate(540deg) translateX(80px); opacity: 0; }
+}
+.leaf-fall { animation: leafFall linear infinite; position: absolute; pointer-events: none; }
+
+/* ── Gradient helpers ───────────────────── */
+.gradient-saffron { background: linear-gradient(135deg, var(--saffron) 0%, var(--sienna) 100%); }
+.gradient-dal     { background: linear-gradient(135deg, var(--dal) 0%, var(--dal-light) 100%); }
+
+/* ── Border glow ────────────────────────── */
+.glow-saffron { box-shadow: 0 0 30px rgba(242,210,78,0.2); }
+.glow-dal     { box-shadow: 0 0 30px rgba(242,210,78,0.2); }
