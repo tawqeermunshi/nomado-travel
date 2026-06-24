@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { motion, useInView } from "framer-motion";
 
 const posts = [
@@ -46,7 +47,7 @@ function PostCard({ post, index, inView }: { post: (typeof posts)[0]; index: num
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0"
         >
-          <Image src={post.image} alt={post.title} fill className="object-cover" sizes="(max-width:768px) 100vw, 33vw" />
+          <Image src={asset(post.image)} alt={post.title} fill className="object-cover" sizes="(max-width:768px) 100vw, 33vw" />
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#102A43]/50 to-transparent" />
         <span className="absolute top-4 left-4 font-clash text-[10px] tracking-[0.25em] uppercase px-2.5 py-1 bg-[#F2D24E]/90 text-[#102A43]">

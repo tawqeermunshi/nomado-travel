@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { motion, useInView } from "framer-motion";
 
 const pillars = [
@@ -57,7 +58,7 @@ export default function WhyNomado() {
             className="relative aspect-[5/4] overflow-hidden"
           >
             <Image
-              src="/images/dal-lake.jpg"
+              src={asset("/images/dal-lake.jpg")}
               alt="Boats on Dal Lake at dawn"
               fill
               className="object-cover"

@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 
 export default function Interlude() {
@@ -14,7 +15,7 @@ export default function Interlude() {
       {/* Parallax image */}
       <motion.div style={{ y }} className="absolute inset-0 h-[130%] -top-[15%]">
         <Image
-          src="/images/autumn.jpg"
+          src={asset("/images/autumn.jpg")}
           alt="Golden chinar trees in autumn, Kashmir"
           fill
           className="object-cover"

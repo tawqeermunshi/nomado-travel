@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 
 export default function About() {
@@ -17,7 +18,7 @@ export default function About() {
           <div className="relative aspect-[4/5] overflow-hidden">
             <motion.div style={{ y: imgY }} className="absolute inset-0 h-[114%] -top-[7%]">
               <Image
-                src="/images/shikara.jpg"
+                src={asset("/images/shikara.jpg")}
                 alt="A vendor selling fruit from a shikara on Dal Lake"
                 fill
                 className="object-cover"

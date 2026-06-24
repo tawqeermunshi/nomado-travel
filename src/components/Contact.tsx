@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { motion, useInView } from "framer-motion";
 
 const interests = ["Culture & Heritage", "Food & Culinary", "Photography", "Nature & Trekking", "Craft & Artisan", "Village Life", "Winter Kashmir", "Spiritual Trails"];
@@ -20,7 +21,7 @@ export default function Contact() {
         {/* Left: image panel */}
         <div className="relative min-h-[55vh] lg:min-h-screen overflow-hidden flex items-end">
           <Image
-            src="/images/snow.jpg"
+            src={asset("/images/snow.jpg")}
             alt="Snow-capped mountains of Kashmir"
             fill
             className="object-cover"

@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Hero() {
@@ -21,7 +22,7 @@ export default function Hero() {
           className="relative h-full w-full"
         >
           <Image
-            src="/images/hero.jpg"
+            src={asset("/images/hero.jpg")}
             alt="Houseboats on Dal Lake against snow-capped mountains, Srinagar"
             fill
             priority

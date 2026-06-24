@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { motion, useInView } from "framer-motion";
 
 type Exp = {
@@ -109,7 +110,7 @@ function Card({ exp, index }: { exp: Exp; index: number }) {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="absolute inset-0"
       >
-        <Image src={exp.image} alt={exp.title} fill className="object-cover" sizes="(max-width:768px) 100vw, 33vw" />
+        <Image src={asset(exp.image)} alt={exp.title} fill className="object-cover" sizes="(max-width:768px) 100vw, 33vw" />
       </motion.div>
 
       {/* Gradient overlay */}
