@@ -33,7 +33,7 @@ export default function Hero() {
       <motion.div style={{ y }} className="absolute inset-0 h-[105%]">
         <div className="relative h-full w-full">
           <Image
-            src={asset("/images/hero-image.jpg")}
+            src={asset("/images/1.jpeg")}
             alt="Houseboats on Dal Lake against snow-capped mountains, Srinagar"
             fill
             priority
