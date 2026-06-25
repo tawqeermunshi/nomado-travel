@@ -163,6 +163,7 @@ export default function Contact() {
                     name="phone"
                     type="tel"
                     placeholder="+91 98765 43210"
+                    required
                     className="bg-transparent border-b border-[#CBD5E1] focus:border-[#D97706] py-2.5 text-[#1F2937] placeholder-[#9CA3AF] text-sm outline-none transition-colors duration-300"
                   />
                 </div>

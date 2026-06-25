@@ -58,72 +58,55 @@ export default function Hero() {
 
       <motion.div
         style={{ y: textY }}
-        className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-20 px-6 md:px-16"
+        className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-16 text-center"
       >
-        <div className="max-w-5xl">
+        <div className="max-w-3xl w-full">
+          {/* Eyebrow */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex items-center gap-4 mb-6"
+            className="flex items-center justify-center gap-4 mb-8"
           >
-            <span className="block w-12 h-px bg-[#D97706]" />
-            <span className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#C9D9E8]">
+            <span className="block w-8 h-px bg-[#D97706]" />
+            <span className="font-clash text-[10px] tracking-[0.45em] uppercase text-[#C9D9E8]/70">
               Kashmir · Curated Journeys
             </span>
+            <span className="block w-8 h-px bg-[#D97706]" />
           </motion.div>
 
-          <h1 className="font-clash font-600 text-[#F5F9FD] leading-[0.95] tracking-tight mb-6">
-            <span className="block overflow-hidden">
-              <motion.span
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="block text-[clamp(2.4rem,7.5vw,6.5rem)]"
-              >
-                Discover Kashmir
-              </motion.span>
-            </span>
-            <span className="block overflow-hidden">
-              <motion.span
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="block text-[clamp(2.4rem,7.5vw,6.5rem)] italic font-cormorant font-400 text-[#F59E0B]"
-              >
-                beyond the postcards.
-              </motion.span>
-            </span>
-          </h1>
-
+          {/* Animated multilingual quote — main text */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="relative h-10 mb-8 overflow-hidden max-w-2xl"
+            transition={{ delay: 0.7 }}
+            className="relative h-28 md:h-24 overflow-hidden mb-10"
           >
             <AnimatePresence mode="wait">
-              <motion.p
+              <motion.blockquote
                 key={index}
                 dir={current.dir}
-                initial={{ opacity: 0, y: 14, filter: "blur(5px)" }}
+                initial={{ opacity: 0, y: 18, filter: "blur(6px)" }}
                 animate={{ opacity: 1, y: 0,  filter: "blur(0px)" }}
-                exit={{   opacity: 0, y: -14, filter: "blur(5px)" }}
-                transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute font-cormorant italic text-[#C9D9E8]/85 text-base md:text-lg leading-snug"
+                exit={{   opacity: 0, y: -18, filter: "blur(6px)" }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute inset-0 flex flex-col items-center justify-center gap-3"
               >
-                {current.text}
-                <span className="font-clash not-italic text-[9px] tracking-[0.25em] uppercase text-[#F59E0B]/60 ml-3 align-middle">
+                <p className="font-cormorant italic text-[#F5F9FD] text-[clamp(1.2rem,3.2vw,2rem)] leading-snug">
+                  {current.text}
+                </p>
+                <span className="font-clash text-[9px] tracking-[0.35em] uppercase text-[#F59E0B]/60">
                   {current.lang}
                 </span>
-              </motion.p>
+              </motion.blockquote>
             </AnimatePresence>
           </motion.div>
 
+          {/* CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 1.2 }}
+            transition={{ duration: 0.7, delay: 1.1 }}
           >
             <a
               href="#contact"

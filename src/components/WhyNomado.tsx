@@ -35,7 +35,7 @@ export default function WhyNomado() {
           >
             <span className="block w-8 h-px bg-[#D97706]" />
             <span className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706]">
-              03 — Why Nomado
+              Why Nomado
             </span>
           </motion.div>
           <motion.h2

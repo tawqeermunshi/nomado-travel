@@ -71,10 +71,14 @@ function RegionTile({ region, onClick, inView, delay }: { region: Region; onClic
           </p>
 
           {/* CTA */}
-          <div className="flex items-center gap-4">
-            <span className="block w-8 h-px bg-[#D97706]" />
-            <span className="font-clash text-[11px] tracking-[0.3em] uppercase text-[#F59E0B] group-hover:tracking-[0.4em] transition-all duration-500">
-              Explore
+          <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center w-10 h-10 border border-[#D97706]/50 group-hover:border-[#D97706] group-hover:bg-[#D97706]/15 transition-all duration-500">
+              <svg viewBox="0 0 20 20" className="w-4 h-4 text-[#F59E0B] transition-transform duration-500 group-hover:translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 4v12M4 10l6 6 6-6" />
+              </svg>
+            </div>
+            <span className="font-clash text-[11px] tracking-[0.3em] uppercase text-[#F59E0B]">
+              Tap to expand
             </span>
           </div>
         </div>
@@ -198,7 +202,7 @@ export default function Destinations() {
             animate={inView ? { opacity: 1 } : {}}
             className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-4"
           >
-            02 — Destinations
+            Destinations
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
