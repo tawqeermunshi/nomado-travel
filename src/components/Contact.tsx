@@ -107,7 +107,7 @@ export default function Contact() {
                         type={f.type}
                         placeholder={f.placeholder}
                         required
-                        className="bg-transparent border-b border-[#25496A] focus:border-[#F2D24E] py-3 text-[#F5F9FD] placeholder-[#3A597A] text-sm outline-none transition-colors duration-300 cursor-none"
+                        className="bg-transparent border-b border-[#25496A] focus:border-[#F2D24E] py-3 text-[#F5F9FD] placeholder-[#3A597A] text-sm outline-none transition-colors duration-300"
                       />
                     </div>
                   ))}
@@ -123,7 +123,7 @@ export default function Contact() {
                         key={item}
                         type="button"
                         onClick={() => toggle(item)}
-                        className="font-clash text-[11px] tracking-[0.1em] uppercase px-3.5 py-2 border transition-all duration-300 cursor-none"
+                        className="font-clash text-[11px] tracking-[0.1em] uppercase px-3.5 py-2 border transition-all duration-300"
                         style={{
                           borderColor: selected.includes(item) ? "#F2D24E" : "#25496A",
                           background: selected.includes(item) ? "rgba(242,210,78,0.12)" : "transparent",
@@ -138,7 +138,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="self-start font-clash text-[12px] tracking-[0.2em] uppercase px-10 py-4 bg-[#F2D24E] text-[#102A43] hover:bg-[#F7E07A] transition-all duration-300 cursor-none mt-2"
+                  className="self-start font-clash text-[12px] tracking-[0.2em] uppercase px-10 py-4 bg-[#F2D24E] text-[#102A43] hover:bg-[#F7E07A] transition-all duration-300 mt-2"
                 >
                   Send My Interests →
                 </button>

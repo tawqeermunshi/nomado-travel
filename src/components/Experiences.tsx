@@ -102,7 +102,7 @@ function Card({ exp, index }: { exp: Exp; index: number }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       data-hover
-      className="relative aspect-square overflow-hidden cursor-none group"
+      className="relative aspect-square overflow-hidden group"
     >
       {/* Image */}
       <motion.div

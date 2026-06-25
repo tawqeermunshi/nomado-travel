@@ -38,7 +38,7 @@ function PostCard({ post, index, inView }: { post: (typeof posts)[0]; index: num
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       data-hover
-      className="group cursor-none"
+      className="group"
     >
       {/* Image */}
       <div className="relative aspect-[3/2] overflow-hidden mb-6">

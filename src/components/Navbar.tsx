@@ -58,7 +58,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile hamburger */}
-        <button onClick={() => setOpen(!open)} className="md:hidden flex flex-col gap-1.5 cursor-none z-50">
+        <button onClick={() => setOpen(!open)} className="md:hidden flex flex-col gap-1.5 z-50">
           <span className={`block w-6 h-0.5 bg-[#F5F9FD] transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`} />
           <span className={`block w-6 h-0.5 bg-[#F5F9FD] transition-all duration-300 ${open ? "opacity-0" : ""}`} />
           <span className={`block w-6 h-0.5 bg-[#F5F9FD] transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`} />

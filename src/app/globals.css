@@ -25,36 +25,11 @@ body {
   color: var(--cream);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-  cursor: none;
 }
 
-/* ── Cursor ─────────────────────────────── */
-.cursor-dot {
-  width: 8px; height: 8px;
-  background: var(--saffron);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.08s ease;
-}
-
-.cursor-ring {
-  width: 38px; height: 38px;
-  border: 1.5px solid rgba(242,210,78,0.7);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, border-color 0.3s ease;
-}
-
-.cursor-ring.hovering {
-  width: 64px; height: 64px;
-  background: rgba(242,210,78,0.08);
-  border-color: var(--saffron-light);
+/* Native finger cursor on all interactive elements */
+button, a, [role="button"], input[type="submit"], label[for] {
+  cursor: pointer;
 }
 
 /* ── Scrollbar ──────────────────────────── */
