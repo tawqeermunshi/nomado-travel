@@ -7,7 +7,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-5">
-              <span className="font-clash text-[1.3rem] font-400 text-[#F5F9FD] tracking-wide">nomado.travel</span>
+              <span className="font-clash text-[1.3rem] font-600 tracking-wide"><span className="text-[#F59E0B]">nomado</span><span className="text-[#F5F9FD]">.travel</span></span>
             </div>
             <p className="font-cormorant text-base italic text-[#B6C6DD] leading-relaxed max-w-xs">
               Curating immersive journeys through the many layers of Kashmir — its people, traditions, landscapes, and stories.
