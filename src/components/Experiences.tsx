@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { asset } from "@/lib/asset";
 import { motion, useInView, AnimatePresence } from "framer-motion";
