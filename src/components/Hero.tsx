@@ -5,14 +5,10 @@ import { asset } from "@/lib/asset";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const quotes = [
-  { lang: "Persian",  dir: "rtl" as const, text: "«اگر بر روی زمین هست، همین‌جاست، همین‌جاست، همین‌جاست»" },
-  { lang: "English",  dir: "ltr" as const, text: "“If there is a paradise on earth, it is here, it is here, it is here.”" },
-  { lang: "Hindi",    dir: "ltr" as const, text: "«अगर धरती पर कहीं स्वर्ग है, तो यहीं है, यहीं है, यहीं है»" },
-  { lang: "French",   dir: "ltr" as const, text: "«S’il existe un paradis sur terre, c’est ici, c’est ici, c’est ici.»" },
-  { lang: "Malay",    dir: "ltr" as const, text: "“Jika ada syurga di bumi, ia di sini, ia di sini, ia di sini.”" },
-  { lang: "Japanese", dir: "ltr" as const, text: "「地上に楽園があるとすれば、それはここだ、ここだ、ここだ。」" },
-  { lang: "German",   dir: "ltr" as const, text: "„Wenn es ein Paradies auf Erden gibt, dann ist es hier, hier, hier.“" },
-  { lang: "Russian",  dir: "ltr" as const, text: "«Если на земле есть рай, то он здесь, здесь, здесь.»" },
+  { lang: “English”,  dir: “ltr” as const, text: “”If there is a paradise on earth, it is here, it is here, it is here.”” },
+  { lang: “Farsi”,    dir: “rtl” as const, text: “«اگر بر روی زمین هست، همین‌جاست، همین‌جاست، همین‌جاست»” },
+  { lang: “Hindi”,    dir: “ltr” as const, text: “«अगर धरती पर कहीं स्वर्ग है, तो यहीं है, यहीं है, यहीं है»” },
+  { lang: “Japanese”, dir: “ltr” as const, text: “「地上に楽園があるとすれば、それはここだ、ここだ、ここだ。」” },
 ];
 
 const INTERVAL = 3400;
