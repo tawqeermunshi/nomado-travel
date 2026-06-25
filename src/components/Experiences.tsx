@@ -37,7 +37,7 @@ function WayCard({ way, index, inView }: { way: typeof ways[0]; index: number; i
       className="group relative overflow-hidden"
     >
       {/* Image */}
-      <div className="relative aspect-[3/4] overflow-hidden">
+      <div className="relative h-[52vh] overflow-hidden">
         <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -58,7 +58,7 @@ function WayCard({ way, index, inView }: { way: typeof ways[0]; index: number; i
           {way.tag}
         </span>
         {/* Bottom overlay */}
-        <div className="absolute bottom-0 left-0 right-0 p-7 md:p-8">
+        <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
           <h3 className="font-clash text-[clamp(1.6rem,3vw,2.4rem)] font-500 text-[#F5F9FD] leading-tight mb-3">
             {way.title}
           </h3>
@@ -86,13 +86,13 @@ export default function Experiences() {
   const inView = useInView(ref, { once: true });
 
   return (
-    <section id="experiences" className="bg-[#FAFAF8] py-32 md:py-48 px-6 md:px-12 lg:px-20">
+    <section id="experiences" className="bg-[#FAFAF8] py-12 md:py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
-        <div ref={ref} className="max-w-3xl mb-20 md:mb-28">
+        <div ref={ref} className="max-w-3xl mb-8 md:mb-10">
           <motion.span
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
-            className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-8"
+            className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-4"
           >
             01 — Experiences
           </motion.span>
@@ -100,7 +100,7 @@ export default function Experiences() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-clash text-[clamp(2.4rem,6vw,5rem)] font-500 leading-[1.02] text-[#083A7A] mb-8"
+            className="font-clash text-[clamp(1.8rem,4vw,3.2rem)] font-500 leading-[1.05] text-[#083A7A] mb-3"
           >
             Three ways to{" "}
             <span className="font-cormorant italic font-400 text-[#F59E0B]">know</span> Kashmir.
@@ -109,14 +109,14 @@ export default function Experiences() {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
-            className="text-[#4B5563] text-base md:text-lg leading-[1.8] max-w-xl"
+            className="text-[#4B5563] text-sm md:text-base leading-[1.7] max-w-xl"
           >
             Every experience is designed to bring you closer to the heart of the
             valley — its people, its craft, its silence, and its joy.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           {ways.map((way, i) => (
             <WayCard key={way.tag} way={way} index={i} inView={inView} />
           ))}

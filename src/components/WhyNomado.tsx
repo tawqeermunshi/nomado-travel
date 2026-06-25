@@ -24,8 +24,8 @@ export default function WhyNomado() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-[#F5F8FD] py-32 md:py-48 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-14 md:gap-24">
+    <section ref={ref} className="bg-[#F5F8FD] py-12 md:py-16 px-6 md:px-12 lg:px-20">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-10 md:gap-16">
         {/* Left: image + heading */}
         <div className="md:col-span-5">
           <motion.div
@@ -42,7 +42,7 @@ export default function WhyNomado() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-clash text-[clamp(2rem,4.5vw,3.6rem)] font-500 leading-[1.05] text-[#083A7A] mb-12"
+            className="font-clash text-[clamp(1.8rem,3.5vw,2.8rem)] font-500 leading-[1.05] text-[#083A7A] mb-6"
           >
             Travel with{" "}
             <span className="font-cormorant italic font-400 text-[#D97706]">intention.</span>
@@ -72,7 +72,7 @@ export default function WhyNomado() {
               initial={{ opacity: 0, x: 30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.25 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="py-8 md:py-10 group"
+              className="py-5 md:py-6 group"
             >
               <div className="flex items-center gap-4 mb-3">
                 <span className="block w-6 h-px bg-[#D97706]" />

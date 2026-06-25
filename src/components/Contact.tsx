@@ -42,7 +42,7 @@ export default function Contact() {
         </div>
 
         {/* Right: form */}
-        <div className="px-6 md:px-16 lg:px-20 py-16 md:py-20 lg:py-24 flex flex-col justify-center">
+        <div className="px-6 md:px-16 lg:px-20 py-10 md:py-14 flex flex-col justify-center">
           <div className="max-w-xl mx-auto w-full">
             <motion.span
               initial={{ opacity: 0 }}

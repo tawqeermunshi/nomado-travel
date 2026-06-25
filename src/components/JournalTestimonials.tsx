@@ -130,7 +130,7 @@ function JournalCarousel({ inView }: { inView: boolean }) {
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 md:mb-20 gap-6">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 md:mb-8 gap-6">
         <div className="max-w-2xl">
           <motion.span
             initial={{ opacity: 0 }}
@@ -143,7 +143,7 @@ function JournalCarousel({ inView }: { inView: boolean }) {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-clash text-[clamp(2rem,5vw,4rem)] font-500 leading-[1.02] text-[#083A7A]"
+            className="font-clash text-[clamp(1.8rem,3.5vw,3rem)] font-500 leading-[1.02] text-[#083A7A]"
           >
             Stories from{" "}
             <span className="font-cormorant italic font-400 text-[#D97706]">the valley.</span>
@@ -166,7 +166,7 @@ function JournalCarousel({ inView }: { inView: boolean }) {
               transition={{ duration: 0.4, delay: i * 0.07 }}
               className="group"
             >
-              <div className="relative aspect-[3/2] overflow-hidden mb-6">
+              <div className="relative aspect-[16/9] overflow-hidden mb-4">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.7 }}
@@ -193,7 +193,7 @@ function JournalCarousel({ inView }: { inView: boolean }) {
       </div>
 
       {/* Dots */}
-      <div className="flex gap-2 mt-10">
+      <div className="flex gap-2 mt-6">
         {posts.map((_, i) => (
           <button
             key={i}
@@ -217,7 +217,7 @@ function TestimonialsCarousel({ inView }: { inView: boolean }) {
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 md:mb-20 gap-6">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 md:mb-8 gap-6">
         <div className="max-w-2xl">
           <motion.span
             initial={{ opacity: 0 }}
@@ -230,7 +230,7 @@ function TestimonialsCarousel({ inView }: { inView: boolean }) {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-clash text-[clamp(2rem,5vw,4rem)] font-500 leading-[1.02] text-[#083A7A]"
+            className="font-clash text-[clamp(1.8rem,3.5vw,3rem)] font-500 leading-[1.02] text-[#083A7A]"
           >
             Words from{" "}
             <span className="font-cormorant italic font-400 text-[#D97706]">our travellers.</span>
@@ -251,13 +251,13 @@ function TestimonialsCarousel({ inView }: { inView: boolean }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.4, delay: i * 0.07 }}
-              className="bg-white border border-[#E2E8F0] p-8 md:p-10 flex flex-col"
+              className="bg-white border border-[#E2E8F0] p-5 md:p-7 flex flex-col"
             >
               <Stars />
               <blockquote className="font-cormorant italic text-[#1F2937] text-lg md:text-xl leading-[1.55] flex-1">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
-              <figcaption className="mt-8 pt-6 border-t border-[#E2E8F0]">
+              <figcaption className="mt-5 pt-4 border-t border-[#E2E8F0]">
                 <div className="font-clash text-base font-600 text-[#083A7A]">{t.name}</div>
                 <div className="font-clash text-[11px] tracking-[0.1em] uppercase text-[#6B7280] mt-1">{t.place}</div>
                 <div className="font-clash text-[11px] tracking-[0.15em] uppercase text-[#D97706] mt-2">{t.trip}</div>
@@ -267,7 +267,7 @@ function TestimonialsCarousel({ inView }: { inView: boolean }) {
         </AnimatePresence>
       </div>
 
-      <div className="flex gap-2 mt-10">
+      <div className="flex gap-2 mt-6">
         {testimonials.map((_, i) => (
           <button
             key={i}
@@ -287,12 +287,12 @@ export default function JournalTestimonials() {
 
   return (
     <div ref={ref}>
-      <section id="journal" className="bg-white py-32 md:py-48 px-6 md:px-12 lg:px-20">
+      <section id="journal" className="bg-white py-12 md:py-16 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <JournalCarousel inView={inView} />
         </div>
       </section>
-      <section className="bg-[#F5F8FD] py-32 md:py-48 px-6 md:px-12 lg:px-20">
+      <section className="bg-[#F5F8FD] py-12 md:py-16 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <TestimonialsCarousel inView={inView} />
         </div>

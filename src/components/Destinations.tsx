@@ -48,7 +48,7 @@ function RegionTile({ region, onClick, inView, delay }: { region: Region; onClic
       onClick={onClick}
       className="relative w-full text-left group overflow-hidden focus:outline-none"
     >
-      <div className="relative h-[58vh] md:h-[68vh] overflow-hidden">
+      <div className="relative h-[44vh] md:h-[52vh] overflow-hidden">
         <motion.div
           whileHover={{ scale: 1.04 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
@@ -189,14 +189,14 @@ export default function Destinations() {
   const activeRegion = regions.find(r => r.id === open) ?? null;
 
   return (
-    <section id="destinations" ref={ref} className="bg-white py-32 md:py-48 px-6 md:px-12 lg:px-20">
+    <section id="destinations" ref={ref} className="bg-white py-12 md:py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="max-w-3xl mb-20 md:mb-28">
+        <div className="max-w-3xl mb-8 md:mb-10">
           <motion.span
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
-            className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-8"
+            className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-4"
           >
             02 — Destinations
           </motion.span>
@@ -204,7 +204,7 @@ export default function Destinations() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-clash text-[clamp(2.4rem,6vw,5rem)] font-500 leading-[1.02] text-[#083A7A]"
+            className="font-clash text-[clamp(1.8rem,4vw,3.2rem)] font-500 leading-[1.05] text-[#083A7A] mb-2"
           >
             Where we{" "}
             <span className="font-cormorant italic font-400 text-[#D97706]">take you.</span>
@@ -213,7 +213,7 @@ export default function Destinations() {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
-            className="text-[#4B5563] text-base md:text-lg leading-[1.8] max-w-xl mt-8"
+            className="text-[#4B5563] text-sm md:text-base leading-[1.7] max-w-xl"
           >
             Two of the most extraordinary regions on earth. Select one to explore.
           </motion.p>
