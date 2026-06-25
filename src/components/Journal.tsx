@@ -58,7 +58,6 @@ export default function Journal() {
                     <Image src={asset(post.image)} alt={post.title} fill className="object-cover" sizes="33vw" />
                   </motion.div>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#083A7A]/50 to-transparent" />
-                  <span className="absolute top-3 left-3 font-clash text-[10px] tracking-[0.25em] uppercase px-2.5 py-1 bg-[#D97706] text-white">{post.tag}</span>
                 </div>
                 <div className="flex items-center gap-3 mb-2">
                   <span className="font-clash text-[10px] tracking-[0.2em] uppercase text-[#6B7280]">{post.readTime} read</span>

@@ -62,7 +62,7 @@ function RegionTile({ region, onClick, inView, delay }: { region: Region; onClic
 
         {/* Content */}
         <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10 lg:p-12">
-          <p className="font-cormorant italic text-[#F59E0B] text-base mb-2 opacity-90">{region.tagline}</p>
+          <p className="font-cormorant italic text-[#F59E0B] text-base mb-2 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">{region.tagline}</p>
           <h3 className="font-clash text-[clamp(2.4rem,4.5vw,4rem)] font-600 text-[#F5F9FD] leading-none mb-4">
             {region.name}
           </h3>
@@ -111,7 +111,7 @@ function ExpandedRegion({ region, onClose }: { region: Region; onClose: () => vo
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <p className="font-cormorant italic text-[#F59E0B] text-base mb-2">{region.tagline}</p>
+          <p className="font-cormorant italic text-[#F59E0B] text-base mb-2">{region.tagline}</p>
             <h3 className="font-clash text-[clamp(2.4rem,5vw,4.5rem)] font-600 text-[#F5F9FD] leading-none">
               {region.name}
             </h3>
