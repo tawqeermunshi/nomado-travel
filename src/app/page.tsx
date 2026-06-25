@@ -1,11 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Experiences from "@/components/Experiences";
 import Interlude from "@/components/Interlude";
+import Destinations from "@/components/Destinations";
 import WhyNomado from "@/components/WhyNomado";
-import Journal from "@/components/Journal";
-import Testimonials from "@/components/Testimonials";
+import JournalTestimonials from "@/components/JournalTestimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -15,12 +14,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
         <Experiences />
         <Interlude />
+        <Destinations />
         <WhyNomado />
-        <Journal />
-        <Testimonials />
+        <JournalTestimonials />
         <Contact />
       </main>
       <Footer />
