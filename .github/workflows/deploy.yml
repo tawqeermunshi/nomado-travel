@@ -25,6 +25,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          NEXT_PUBLIC_SHEET_URL: https://script.google.com/macros/s/AKfycbzGN4HJNsnqamfs3pwwV-6b1VseLKLMnkH75PQEHyPzlfRhAczo_8z3ydAhvgQ2jIb9SQ/exec
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
