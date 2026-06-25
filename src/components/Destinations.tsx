@@ -46,9 +46,9 @@ function RegionTile({ region, onClick, inView, delay }: { region: Region; onClic
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
       onClick={onClick}
-      className="relative w-full text-left group overflow-hidden focus:outline-none"
+      className="relative w-full text-left group overflow-hidden rounded-3xl shadow-[0_16px_40px_-16px_rgba(0,0,0,0.65)] focus:outline-none"
     >
-      <div className="relative h-[44vh] md:h-[52vh] overflow-hidden">
+      <div className="relative h-[44vh] md:h-[52vh] overflow-hidden rounded-3xl">
         <motion.div
           whileHover={{ scale: 1.04 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
@@ -137,9 +137,9 @@ function ExpandedRegion({ region, onClose }: { region: Region; onClose: () => vo
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.15 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
-              className="group/card relative overflow-hidden"
+              className="group/card relative overflow-hidden rounded-2xl shadow-[0_12px_30px_-14px_rgba(0,0,0,0.6)]"
             >
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
                 <motion.div
                   whileHover={{ scale: 1.07 }}
                   transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}

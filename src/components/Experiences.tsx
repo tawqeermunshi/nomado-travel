@@ -28,10 +28,10 @@ function usePerPage() {
 
 function NavBtn({ dir, onClick }: { dir: "prev" | "next"; onClick: () => void }) {
   return (
-    <button onClick={onClick} aria-label={dir} className="w-10 h-10 border border-[#CBD5E1] hover:border-[#D97706] hover:bg-[#D97706] text-[#475569] hover:text-white transition-all duration-300 flex items-center justify-center">
+    <button onClick={onClick} aria-label={dir} className="w-11 h-11 rounded-full bg-white border border-[#E8EDF3] shadow-md hover:shadow-lg hover:bg-[#D97706] hover:border-[#D97706] text-[#475569] hover:text-white hover:scale-105 transition-all duration-300 flex items-center justify-center">
       {dir === "prev"
-        ? <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8"><path strokeLinecap="round" strokeLinejoin="round" d="M12 16l-6-6 6-6" /></svg>
-        : <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8"><path strokeLinecap="round" strokeLinejoin="round" d="M8 4l6 6-6 6" /></svg>}
+        ? <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2"><path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6" /></svg>
+        : <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 6l6 6-6 6" /></svg>}
     </button>
   );
 }
@@ -80,9 +80,9 @@ export default function Experiences() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.45, delay: i * 0.07 }}
-                className="group relative overflow-hidden"
+                className="group relative overflow-hidden rounded-3xl shadow-[0_10px_30px_-12px_rgba(8,58,122,0.35)] hover:shadow-[0_20px_45px_-12px_rgba(8,58,122,0.45)] transition-shadow duration-500"
               >
-                <div className="relative h-[48vh] overflow-hidden">
+                <div className="relative h-[48vh] overflow-hidden rounded-3xl">
                   <motion.div
                     whileHover={{ scale: 1.04 }}
                     transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}

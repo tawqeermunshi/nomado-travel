@@ -15,10 +15,10 @@ const posts = [
 
 function NavBtn({ dir, onClick }: { dir: "prev" | "next"; onClick: () => void }) {
   return (
-    <button onClick={onClick} aria-label={dir} className="w-10 h-10 border border-[#CBD5E1] hover:border-[#D97706] hover:bg-[#D97706] text-[#475569] hover:text-white transition-all duration-300 flex items-center justify-center">
+    <button onClick={onClick} aria-label={dir} className="w-11 h-11 rounded-full bg-white border border-[#E8EDF3] shadow-md hover:shadow-lg hover:bg-[#D97706] hover:border-[#D97706] text-[#475569] hover:text-white hover:scale-105 transition-all duration-300 flex items-center justify-center">
       {dir === "prev"
-        ? <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8"><path strokeLinecap="round" strokeLinejoin="round" d="M12 16l-6-6 6-6" /></svg>
-        : <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8"><path strokeLinecap="round" strokeLinejoin="round" d="M8 4l6 6-6 6" /></svg>}
+        ? <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2"><path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6" /></svg>
+        : <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 6l6 6-6 6" /></svg>}
     </button>
   );
 }
@@ -65,7 +65,7 @@ export default function Journal() {
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4, delay: i * 0.07 }}
                 className="group">
-                <div className="relative aspect-[16/9] overflow-hidden mb-4">
+                <div className="relative aspect-[16/9] overflow-hidden rounded-2xl shadow-[0_10px_28px_-14px_rgba(8,58,122,0.4)] group-hover:shadow-[0_18px_38px_-14px_rgba(8,58,122,0.5)] transition-shadow duration-500 mb-4">
                   <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.7 }} className="absolute inset-0">
                     <Image src={asset(post.image)} alt={post.title} fill className="object-cover" sizes="33vw" />
                   </motion.div>
