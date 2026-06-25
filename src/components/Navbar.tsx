@@ -26,8 +26,8 @@ export default function Navbar() {
         }`}
       >
         {/* Brand */}
-        <a href="#" className="font-clash text-[1.15rem] md:text-[1.3rem] font-600 tracking-wide">
-          <span className="text-[#F59E0B]">nomado</span><span className="text-[#F5F9FD]">.travel</span>
+        <a href="#" className="text-[1.15rem] md:text-[1.3rem] tracking-wide">
+          <span className="font-century-bold text-[#F59E0B]">nomado</span><span className="font-century text-[#F5F9FD]">.travel</span>
         </a>
 
         {/* Desktop links */}

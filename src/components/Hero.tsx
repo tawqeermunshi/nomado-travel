@@ -38,7 +38,7 @@ export default function Hero() {
           className="relative h-full w-full"
         >
           <Image
-            src={asset("/images/Kashmir2.jpg")}
+            src={asset("/images/hero-image.jpg")}
             alt="Houseboats on Dal Lake against snow-capped mountains, Srinagar"
             fill
             priority
