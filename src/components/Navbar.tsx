@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
 
-const links = ["Experiences", "Destinations", "Journal", "Contact"];
+const links = ["Destinations", "Experiences", "Journal", "Contact"];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -53,7 +53,7 @@ export default function Navbar() {
             href="#contact"
             className="font-clash text-[12px] tracking-[0.15em] uppercase px-5 py-2.5 border border-[#D97706] text-[#F59E0B] hover:bg-[#D97706] hover:text-white transition-all duration-300"
           >
-            Plan Journey
+            Make an Enquiry
           </a>
         </div>
 
