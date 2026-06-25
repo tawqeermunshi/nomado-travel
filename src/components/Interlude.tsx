@@ -5,7 +5,7 @@ import { asset } from "@/lib/asset";
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion";
 
 const quotes = [
-  { lang: "Persian",  dir: "rtl" as const, text: "«اگر بهشتی بر روی زمین هست، همین‌جاست، همین‌جاست، همین‌جاست»" },
+  { lang: "Persian",  dir: "rtl" as const, text: "«اگر بر روی زمین هست، همین‌جاست، همین‌جاست، همین‌جاست»" },
   { lang: "English",  dir: "ltr" as const, text: "“If there is a paradise on earth, it is here, it is here, it is here.”" },
   { lang: "Hindi",    dir: "ltr" as const, text: "«अगर धरती पर कहीं स्वर्ग है, तो यहीं है, यहीं है, यहीं है»" },
   { lang: "French",   dir: "ltr" as const, text: "«S’il existe un paradis sur terre, c’est ici, c’est ici, c’est ici.»" },
