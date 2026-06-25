@@ -5,24 +5,21 @@
 @source "../**/*.{ts,tsx}";
 
 :root {
-  --walnut: #102A43;
-  --walnut-2: #163A52;
-  --saffron: #F2D24E;
-  --saffron-light: #F7E07A;
-  --dal: #F2D24E;
-  --dal-light: #F7E07A;
-  --sienna: #F2D24E;
-  --cream: #F5F9FD;
-  --cream-dark: #C9D9E8;
-  --umber: #6E879E;
-  --umber-light: #9DB2C7;
+  --white: #FFFFFF;
+  --ivory: #FAFAF8;
+  --tint: #F5F8FD;
+  --royal: #0F4C9C;
+  --royal-dark: #083A7A;
+  --saffron: #D97706;
+  --saffron-gold: #F59E0B;
+  --charcoal: #1F2937;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--walnut);
-  color: var(--cream);
+  background-color: var(--white);
+  color: var(--charcoal);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
@@ -34,10 +31,10 @@ button, a, [role="button"], input[type="submit"], label[for] {
 
 /* ── Scrollbar ──────────────────────────── */
 ::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: var(--walnut); }
-::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 2px; }
+::-webkit-scrollbar-track { background: var(--tint); }
+::-webkit-scrollbar-thumb { background: var(--royal); border-radius: 2px; }
 
-::selection { background: var(--saffron); color: var(--walnut); }
+::selection { background: var(--saffron); color: var(--white); }
 
 /* ── Fonts ──────────────────────────────── */
 .font-clash { font-family: 'Clash Display', 'Inter', sans-serif; }

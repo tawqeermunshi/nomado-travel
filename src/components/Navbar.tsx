@@ -22,7 +22,7 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 lg:px-20 transition-all duration-500 ${
-          scrolled ? "py-4 bg-[#102A43]/92 backdrop-blur-md border-b border-[#F2D24E]/15" : "py-6 md:py-7"
+          scrolled ? "py-4 bg-[#083A7A]/95 backdrop-blur-md border-b border-[#D97706]/25" : "py-6 md:py-7"
         }`}
       >
         {/* Brand */}
@@ -32,7 +32,7 @@ export default function Navbar() {
             <span className="font-clash text-[1.35rem] md:text-[1.55rem] font-700 text-[#F5F9FD]" style={{ letterSpacing: "0.18em" }}>
               NOMADO
             </span>
-            <span className="font-clash text-[8px] md:text-[9px] font-500 text-[#F2D24E] mt-1" style={{ letterSpacing: "0.55em" }}>
+            <span className="font-clash text-[8px] md:text-[9px] font-500 text-[#F59E0B] mt-1" style={{ letterSpacing: "0.55em" }}>
               TRAVEL
             </span>
           </span>
@@ -51,7 +51,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="font-clash text-[12px] tracking-[0.15em] uppercase px-5 py-2.5 border border-[#F2D24E] text-[#F2D24E] hover:bg-[#F2D24E] hover:text-[#102A43] transition-all duration-300"
+            className="font-clash text-[12px] tracking-[0.15em] uppercase px-5 py-2.5 border border-[#D97706] text-[#F59E0B] hover:bg-[#D97706] hover:text-white transition-all duration-300"
           >
             Plan Journey
           </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#102A43] flex flex-col items-center justify-center gap-9"
+            className="fixed inset-0 z-40 bg-[#083A7A] flex flex-col items-center justify-center gap-9"
           >
             {links.map((link, i) => (
               <motion.a

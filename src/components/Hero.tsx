@@ -37,8 +37,8 @@ export default function Hero() {
         className="absolute inset-0"
         // top + bottom darkening for legibility
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#102A43]/70 via-transparent to-[#102A43]/95" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#102A43]/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#072350]/70 via-transparent to-[#072350]/95" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#072350]/60 via-transparent to-transparent" />
       </motion.div>
 
       {/* Content — bottom-left editorial */}
@@ -53,7 +53,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex items-center gap-4 mb-8"
           >
-            <span className="block w-12 h-px bg-[#F2D24E]" />
+            <span className="block w-12 h-px bg-[#D97706]" />
             <span className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#C9D9E8]">
               Kashmir · Curated Journeys
             </span>
@@ -75,7 +75,7 @@ export default function Hero() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="block text-[clamp(2.8rem,9vw,7.5rem)] italic font-cormorant font-400 text-[#F7E07A]"
+                className="block text-[clamp(2.8rem,9vw,7.5rem)] italic font-cormorant font-400 text-[#F59E0B]"
               >
                 beyond the postcards.
               </motion.span>
@@ -100,7 +100,7 @@ export default function Hero() {
           >
             <a
               href="#experiences"
-              className="font-clash text-[12px] tracking-[0.15em] uppercase px-8 py-4 bg-[#F2D24E] text-[#102A43] hover:bg-[#F7E07A] transition-all duration-300"
+              className="font-clash text-[12px] tracking-[0.15em] uppercase px-8 py-4 bg-[#D97706] text-white hover:bg-[#F59E0B] transition-all duration-300"
             >
               Explore Experiences
             </a>
@@ -127,7 +127,7 @@ export default function Hero() {
         <motion.div
           animate={{ scaleY: [0.3, 1, 0.3], originY: 0 }}
           transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="w-px h-12 bg-[#F7E07A]"
+          className="w-px h-12 bg-[#F59E0B]"
         />
       </motion.div>
     </section>

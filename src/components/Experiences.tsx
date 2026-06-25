@@ -118,22 +118,22 @@ function Card({ exp, index }: { exp: Exp; index: number }) {
         className="absolute inset-0 transition-all duration-500"
         style={{
           background: hovered
-            ? "linear-gradient(to top, rgba(8,24,40,0.95) 0%, rgba(8,24,40,0.55) 45%, rgba(8,24,40,0.2) 100%)"
-            : "linear-gradient(to top, rgba(8,24,40,0.85) 0%, rgba(8,24,40,0.1) 55%, rgba(8,24,40,0.05) 100%)",
+            ? "linear-gradient(to top, rgba(7,35,80,0.95) 0%, rgba(7,35,80,0.55) 45%, rgba(7,35,80,0.2) 100%)"
+            : "linear-gradient(to top, rgba(7,35,80,0.85) 0%, rgba(7,35,80,0.1) 55%, rgba(7,35,80,0.05) 100%)",
         }}
       />
 
       {/* Top row: number + tag */}
       <div className="absolute top-5 left-5 right-5 flex items-start justify-between">
         <span className="font-clash text-[13px] tracking-[0.2em] text-[#F5F9FD]/70">{exp.number}</span>
-        <span className="font-clash text-[10px] tracking-[0.25em] uppercase px-2.5 py-1 bg-[#F2D24E]/90 text-[#102A43]">
+        <span className="font-clash text-[10px] tracking-[0.25em] uppercase px-2.5 py-1 bg-[#D97706] text-white">
           {exp.tag}
         </span>
       </div>
 
       {/* Bottom content */}
       <div className="absolute bottom-0 left-0 right-0 p-5">
-        <p className="font-cormorant italic text-[#F7E07A] text-xs mb-1">{exp.subtitle}</p>
+        <p className="font-cormorant italic text-[#F59E0B] text-xs mb-1">{exp.subtitle}</p>
         <h3 className="font-clash text-lg md:text-xl font-600 text-[#F5F9FD] leading-tight mb-0">
           {exp.title}
         </h3>
@@ -146,7 +146,7 @@ function Card({ exp, index }: { exp: Exp; index: number }) {
           className="overflow-hidden"
         >
           <p className="text-[#C9D9E8]/80 text-[13px] leading-relaxed pt-2.5">{exp.desc}</p>
-          <div className="flex items-center gap-2 mt-3 text-[#F7E07A] font-clash text-[11px] tracking-[0.2em] uppercase">
+          <div className="flex items-center gap-2 mt-3 text-[#F59E0B] font-clash text-[11px] tracking-[0.2em] uppercase">
             <span>Discover</span>
             <span>→</span>
           </div>
@@ -161,14 +161,14 @@ export default function Experiences() {
   const inView = useInView(ref, { once: true });
 
   return (
-    <section id="experiences" className="bg-[#0A2236] py-32 md:py-48 px-6 md:px-12 lg:px-20">
+    <section id="experiences" className="bg-[#FAFAF8] py-32 md:py-48 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div ref={ref} className="max-w-3xl mb-20 md:mb-28">
           <motion.span
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
-            className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#F2D24E] block mb-8"
+            className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-8"
           >
             02 — Experiences
           </motion.span>
@@ -176,16 +176,16 @@ export default function Experiences() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-clash text-[clamp(2.4rem,6vw,5rem)] font-500 leading-[1.02] text-[#F5F9FD] mb-8"
+            className="font-clash text-[clamp(2.4rem,6vw,5rem)] font-500 leading-[1.02] text-[#083A7A] mb-8"
           >
             Nine ways to{" "}
-            <span className="font-cormorant italic font-400 text-[#F7E07A]">know</span> Kashmir.
+            <span className="font-cormorant italic font-400 text-[#F59E0B]">know</span> Kashmir.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
-            className="text-[#6E879E] text-base md:text-lg leading-[1.8] max-w-xl"
+            className="text-[#4B5563] text-base md:text-lg leading-[1.8] max-w-xl"
           >
             Every experience is designed to bring you closer to the heart of the
             valley — its people, its craft, its silence, and its joy.

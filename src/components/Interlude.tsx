@@ -23,8 +23,8 @@ export default function Interlude() {
       </motion.div>
 
       {/* Scrim */}
-      <div className="absolute inset-0 bg-[#102A43]/45" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A2236]/60 via-transparent to-[#0A2236]/80" />
+      <div className="absolute inset-0 bg-[#072350]/45" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#072350]/60 via-transparent to-[#072350]/80" />
 
       {/* Quote */}
       <div className="relative z-10 text-center px-6 max-w-4xl">
@@ -32,7 +32,7 @@ export default function Interlude() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 1 }}
-          className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#F7E07A] block mb-10"
+          className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#F59E0B] block mb-10"
         >
           The Chinar in Autumn
         </motion.span>

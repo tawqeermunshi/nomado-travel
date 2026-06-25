@@ -6,17 +6,14 @@ import { motion, useInView } from "framer-motion";
 
 const pillars = [
   {
-    no: "I",
     word: "Curated",
     desc: "Every journey is thoughtfully designed around authentic experiences, never crowded tourist circuits.",
   },
   {
-    no: "II",
     word: "Local",
     desc: "Our experiences are created and hosted by people born and raised in the valley — who know it intimately.",
   },
   {
-    no: "III",
     word: "Personal",
     desc: "Flexible, meaningful, and tailored to you. No two Nomado journeys are ever quite the same.",
   },
@@ -27,7 +24,7 @@ export default function WhyNomado() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-[#F4F8FC] py-32 md:py-48 px-6 md:px-12 lg:px-20">
+    <section ref={ref} className="bg-[#F5F8FD] py-32 md:py-48 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-14 md:gap-24">
         {/* Left: image + heading */}
         <div className="md:col-span-5">
@@ -36,8 +33,8 @@ export default function WhyNomado() {
             animate={inView ? { opacity: 1 } : {}}
             className="flex items-center gap-3 mb-8"
           >
-            <span className="block w-8 h-px bg-[#F2D24E]" />
-            <span className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#1E4060]">
+            <span className="block w-8 h-px bg-[#D97706]" />
+            <span className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706]">
               03 — Why Nomado
             </span>
           </motion.div>
@@ -45,10 +42,10 @@ export default function WhyNomado() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-clash text-[clamp(2rem,4.5vw,3.6rem)] font-500 leading-[1.05] text-[#102A43] mb-12"
+            className="font-clash text-[clamp(2rem,4.5vw,3.6rem)] font-500 leading-[1.05] text-[#083A7A] mb-12"
           >
             Travel with{" "}
-            <span className="font-cormorant italic font-400 text-[#C99A1E]">intention.</span>
+            <span className="font-cormorant italic font-400 text-[#D97706]">intention.</span>
           </motion.h2>
 
           <motion.div
@@ -63,29 +60,27 @@ export default function WhyNomado() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#102A43]/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#083A7A]/30 to-transparent" />
           </motion.div>
         </div>
 
         {/* Right: pillars */}
-        <div className="md:col-span-7 flex flex-col justify-center divide-y divide-[#D5E0EC]">
+        <div className="md:col-span-7 flex flex-col justify-center divide-y divide-[#E2E8F0]">
           {pillars.map((p, i) => (
             <motion.div
               key={p.word}
               initial={{ opacity: 0, x: 30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.25 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="py-8 md:py-10 group flex gap-8 items-start"
+              className="py-8 md:py-10 group"
             >
-              <span className="font-cormorant italic text-3xl text-[#F2D24E] w-12 shrink-0 pt-1 [text-shadow:0_1px_0_rgba(30,64,96,0.15)]">
-                {p.no}
-              </span>
-              <div>
-                <h3 className="font-clash text-3xl md:text-4xl font-500 text-[#102A43] mb-3 transition-colors duration-300 group-hover:text-[#1E4060]">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="block w-6 h-px bg-[#D97706]" />
+                <h3 className="font-clash text-3xl md:text-4xl font-500 text-[#083A7A] transition-colors duration-300 group-hover:text-[#0F4C9C]">
                   {p.word}
                 </h3>
-                <p className="text-[#516B85] text-base leading-[1.8] max-w-md">{p.desc}</p>
               </div>
+              <p className="text-[#4B5563] text-base leading-[1.8] max-w-md md:pl-10">{p.desc}</p>
             </motion.div>
           ))}
         </div>

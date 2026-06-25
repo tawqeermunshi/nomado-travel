@@ -5,6 +5,7 @@ import Experiences from "@/components/Experiences";
 import Interlude from "@/components/Interlude";
 import WhyNomado from "@/components/WhyNomado";
 import Journal from "@/components/Journal";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Interlude />
         <WhyNomado />
         <Journal />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

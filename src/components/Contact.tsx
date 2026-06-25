@@ -16,10 +16,10 @@ export default function Contact() {
     setSelected(prev => (prev.includes(item) ? prev.filter(i => i !== item) : [...prev, item]));
 
   return (
-    <section id="contact" ref={ref} className="bg-[#102A43]">
-      <div className="grid lg:grid-cols-2">
-        {/* Left: image panel */}
-        <div className="relative min-h-[55vh] lg:min-h-screen overflow-hidden flex items-end">
+    <section id="contact" ref={ref} className="bg-white">
+      <div className="grid lg:grid-cols-2 lg:items-center">
+        {/* Left: image panel — fixed height so it fits the viewport */}
+        <div className="relative h-[42vh] lg:h-[58vh] overflow-hidden flex items-end">
           <Image
             src={asset("/images/snow.jpg")}
             alt="Snow-capped mountains of Kashmir"
@@ -27,14 +27,14 @@ export default function Contact() {
             className="object-cover"
             sizes="(max-width:1024px) 100vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#07192A]/90 via-[#102A43]/25 to-[#102A43]/30" />
-          <div className="relative p-10 md:p-16 lg:p-20">
-            <span className="block w-12 h-px bg-[#F7E07A] mb-7" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#072350]/85 via-[#072350]/20 to-[#072350]/25" />
+          <div className="relative p-8 md:p-12 lg:p-16">
+            <span className="block w-12 h-px bg-[#F59E0B] mb-6" />
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.9 }}
-              className="font-cormorant italic text-[clamp(1.6rem,2.8vw,2.6rem)] text-[#F5F9FD] leading-[1.3] max-w-sm"
+              className="font-cormorant italic text-[clamp(1.5rem,2.4vw,2.3rem)] text-[#F5F9FD] leading-[1.3] max-w-sm"
             >
               Every great journey begins with a single conversation.
             </motion.p>
@@ -42,29 +42,29 @@ export default function Contact() {
         </div>
 
         {/* Right: form */}
-        <div className="px-6 md:px-16 lg:px-24 py-24 md:py-32 lg:py-40 flex flex-col justify-center">
+        <div className="px-6 md:px-16 lg:px-20 py-16 md:py-20 lg:py-24 flex flex-col justify-center">
           <div className="max-w-xl mx-auto w-full">
             <motion.span
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
-              className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#F2D24E] block mb-8"
+              className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-8"
             >
-              05 — Plan Your Journey
+              06 — Plan Your Journey
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="font-clash text-[clamp(2rem,4.5vw,3.4rem)] font-500 leading-[1.05] text-[#F5F9FD] mb-6"
+              className="font-clash text-[clamp(2rem,4.5vw,3.4rem)] font-500 leading-[1.05] text-[#083A7A] mb-6"
             >
               Tell us what{" "}
-              <span className="font-cormorant italic font-400 text-[#F7E07A]">inspires you.</span>
+              <span className="font-cormorant italic font-400 text-[#D97706]">inspires you.</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.2 }}
-              className="text-[#6E879E] text-base leading-[1.8] mb-12"
+              className="text-[#4B5563] text-base leading-[1.8] mb-12"
             >
               Culture, food, photography, nature, or simply Kashmir at a slower
               pace — we&apos;d love to craft a journey that&apos;s entirely yours.
@@ -74,11 +74,11 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="border border-[#F2D24E]/30 p-12 text-center"
+                className="border border-[#D97706]/40 p-12 text-center"
               >
-                <div className="font-clash text-5xl text-[#F2D24E] mb-4">✦</div>
-                <h3 className="font-clash text-2xl font-500 text-[#F5F9FD] mb-3">We&apos;ve received your note.</h3>
-                <p className="font-cormorant italic text-[#6E879E] text-lg">
+                <div className="font-clash text-5xl text-[#D97706] mb-4">✦</div>
+                <h3 className="font-clash text-2xl font-500 text-[#083A7A] mb-3">We&apos;ve received your note.</h3>
+                <p className="font-cormorant italic text-[#4B5563] text-lg">
                   Someone from the team will reach out within 48 hours.
                 </p>
               </motion.div>
@@ -99,7 +99,7 @@ export default function Contact() {
                     { id: "email", label: "Email", placeholder: "amir@example.com", type: "email" },
                   ].map(f => (
                     <div key={f.id} className="flex flex-col gap-2">
-                      <label htmlFor={f.id} className="font-clash text-[10px] tracking-[0.25em] uppercase text-[#6E879E]">
+                      <label htmlFor={f.id} className="font-clash text-[10px] tracking-[0.25em] uppercase text-[#475569]">
                         {f.label}
                       </label>
                       <input
@@ -107,14 +107,14 @@ export default function Contact() {
                         type={f.type}
                         placeholder={f.placeholder}
                         required
-                        className="bg-transparent border-b border-[#25496A] focus:border-[#F2D24E] py-3 text-[#F5F9FD] placeholder-[#3A597A] text-sm outline-none transition-colors duration-300"
+                        className="bg-transparent border-b border-[#CBD5E1] focus:border-[#D97706] py-3 text-[#1F2937] placeholder-[#9CA3AF] text-sm outline-none transition-colors duration-300"
                       />
                     </div>
                   ))}
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <span className="font-clash text-[10px] tracking-[0.25em] uppercase text-[#6E879E]">
+                  <span className="font-clash text-[10px] tracking-[0.25em] uppercase text-[#475569]">
                     What interests you?
                   </span>
                   <div className="flex flex-wrap gap-2.5">
@@ -125,9 +125,9 @@ export default function Contact() {
                         onClick={() => toggle(item)}
                         className="font-clash text-[11px] tracking-[0.1em] uppercase px-3.5 py-2 border transition-all duration-300"
                         style={{
-                          borderColor: selected.includes(item) ? "#F2D24E" : "#25496A",
-                          background: selected.includes(item) ? "rgba(242,210,78,0.12)" : "transparent",
-                          color: selected.includes(item) ? "#F7E07A" : "#6E879E",
+                          borderColor: selected.includes(item) ? "#D97706" : "#CBD5E1",
+                          background: selected.includes(item) ? "rgba(217,119,6,0.10)" : "transparent",
+                          color: selected.includes(item) ? "#B45309" : "#475569",
                         }}
                       >
                         {item}
@@ -138,7 +138,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="self-start font-clash text-[12px] tracking-[0.2em] uppercase px-10 py-4 bg-[#F2D24E] text-[#102A43] hover:bg-[#F7E07A] transition-all duration-300 mt-2"
+                  className="self-start font-clash text-[12px] tracking-[0.2em] uppercase px-10 py-4 bg-[#D97706] text-white hover:bg-[#F59E0B] transition-all duration-300 mt-2"
                 >
                   Send My Interests →
                 </button>
