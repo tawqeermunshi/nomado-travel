@@ -22,7 +22,7 @@ const ways = [
   {
     tag: "Culinary",
     title: "Culinary",
-    image: "/images/wazwan.jpg",
+    image: "/images/wazwan-new.jpg",
     items: ["Wazwan", "Cafes", "Home Food"],
     desc: "Eat as Kashmiris eat — in family kitchens, at bakeries before sunrise, and at the grand ceremonial feast of Wazwan.",
   },
