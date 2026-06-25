@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
 
 const links = ["Destinations", "Experiences", "Journal", "Contact"];
+const linkHrefs: Record<string, string> = { Contact: "#reach-us" };
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -43,7 +44,7 @@ export default function Navbar() {
           {links.map(link => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={linkHrefs[link] ?? `#${link.toLowerCase()}`}
               className="font-clash text-[12px] tracking-[0.18em] uppercase text-[#9DB2C7] hover:text-[#F5F9FD] transition-colors duration-300"
             >
               {link}
@@ -77,7 +78,7 @@ export default function Navbar() {
             {links.map((link, i) => (
               <motion.a
                 key={link}
-                href={`#${link.toLowerCase()}`}
+                href={linkHrefs[link] ?? `#${link.toLowerCase()}`}
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

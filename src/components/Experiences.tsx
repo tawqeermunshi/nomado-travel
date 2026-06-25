@@ -15,7 +15,16 @@ const experiences = [
   { title: "Home Kitchen Visits",  image: "/images/houses-lake.jpg", desc: "Cook alongside Kashmiri families and eat as they eat — unhurried, generous, real." },
 ];
 
-const PER_PAGE = 3;
+function usePerPage() {
+  const [perPage, setPerPage] = useState(3);
+  useEffect(() => {
+    const update = () => setPerPage(window.innerWidth < 768 ? 1 : 3);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+  return perPage;
+}
 
 function NavBtn({ dir, onClick }: { dir: "prev" | "next"; onClick: () => void }) {
   return (
@@ -31,8 +40,9 @@ export default function Experiences() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
   const [idx, setIdx] = useState(0);
+  const perPage = usePerPage();
   const total = experiences.length;
-  const shown = Array.from({ length: PER_PAGE }, (_, k) => experiences[(idx + k) % total]);
+  const shown = Array.from({ length: perPage }, (_, k) => experiences[(idx + k) % total]);
 
   return (
     <section id="experiences" ref={ref} className="bg-[#FAFAF8] py-12 md:py-16 px-6 md:px-12 lg:px-20">
@@ -61,7 +71,7 @@ export default function Experiences() {
           <div className="shrink-0">
             <NavBtn dir="prev" onClick={() => setIdx(i => (i - 1 + total) % total)} />
           </div>
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+          <div className={`flex-1 grid gap-5 md:gap-6 ${perPage === 1 ? "grid-cols-1" : "grid-cols-3"}`}>
           <AnimatePresence mode="wait">
             {shown.map((exp, i) => (
               <motion.article

@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const testimonials = [
@@ -33,12 +33,24 @@ function NavBtn({ dir, onClick }: { dir: "prev" | "next"; onClick: () => void })
   );
 }
 
+function usePerPage() {
+  const [perPage, setPerPage] = useState(3);
+  useEffect(() => {
+    const update = () => setPerPage(window.innerWidth < 768 ? 1 : 3);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+  return perPage;
+}
+
 export default function Testimonials() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [idx, setIdx] = useState(0);
+  const perPage = usePerPage();
   const total = testimonials.length;
-  const shown = Array.from({ length: 3 }, (_, k) => testimonials[(idx + k) % total]);
+  const shown = Array.from({ length: perPage }, (_, k) => testimonials[(idx + k) % total]);
 
   return (
     <section ref={ref} className="bg-[#F5F8FD] py-12 md:py-16 px-6 md:px-12 lg:px-20">
@@ -56,7 +68,7 @@ export default function Testimonials() {
           <div className="shrink-0">
             <NavBtn dir="prev" onClick={() => setIdx(i => (i - 1 + total) % total)} />
           </div>
-          <div className="flex-1 grid md:grid-cols-3 gap-5 md:gap-6">
+          <div className={`flex-1 grid gap-5 md:gap-6 ${perPage === 1 ? "grid-cols-1" : "grid-cols-3"}`}>
           <AnimatePresence mode="wait">
             {shown.map((t, i) => (
               <motion.figure key={`t-${idx}-${i}`}

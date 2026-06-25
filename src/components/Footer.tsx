@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="flex flex-col gap-4">
+          <div id="reach-us" className="flex flex-col gap-4">
             <span className="font-clash text-[11px] tracking-[0.3em] uppercase text-[#F59E0B] mb-2">Reach Us</span>
             <a href="mailto:nomadotravels@gmail.com" className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD] hover:text-white transition-colors duration-300">
               nomadotravels@gmail.com
@@ -42,7 +42,7 @@ export default function Footer() {
             <a href="tel:+917006712010" className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD] hover:text-white transition-colors duration-300">
               +91 7006712010
             </a>
-            <p className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD]">Srinagar, Kashmir</p>
+            <p className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD]">Srinagar, Jammu and Kashmir</p>
             <div className="flex gap-3 mt-2">
               <a href="https://www.instagram.com/nomado.travel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 border border-[#2A5599] hover:border-[#F59E0B]/50 flex items-center justify-center text-[#B6C6DD] hover:text-[#F59E0B] transition-colors duration-300">
                 <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
