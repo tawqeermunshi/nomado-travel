@@ -30,13 +30,8 @@ export default function Hero() {
 
   return (
     <section ref={ref} className="relative h-[82vh] w-full overflow-hidden">
-      <motion.div style={{ y }} className="absolute inset-0 h-[110%]">
-        <motion.div
-          initial={{ scale: 1.04 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 8, ease: "easeOut" }}
-          className="relative h-full w-full"
-        >
+      <motion.div style={{ y }} className="absolute inset-0 h-[105%]">
+        <div className="relative h-full w-full">
           <Image
             src={asset("/images/hero-image.jpg")}
             alt="Houseboats on Dal Lake against snow-capped mountains, Srinagar"
@@ -44,7 +39,7 @@ export default function Hero() {
             priority
             className="object-cover"
           />
-        </motion.div>
+        </div>
       </motion.div>
 
       <motion.div style={{ opacity: scrimOpacity }} className="absolute inset-0">
