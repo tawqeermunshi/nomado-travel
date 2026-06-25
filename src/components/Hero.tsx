@@ -37,7 +37,7 @@ export default function Hero() {
             alt="Houseboats on Dal Lake against snow-capped mountains, Srinagar"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-[25%_center] md:object-center"
           />
         </div>
       </motion.div>
