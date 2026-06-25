@@ -48,8 +48,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.div style={{ opacity: scrimOpacity }} className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#072350]/80 via-[#072350]/50 to-[#072350]/95" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#072350]/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/60" />
       </motion.div>
 
       <motion.div
