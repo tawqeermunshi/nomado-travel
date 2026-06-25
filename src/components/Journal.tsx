@@ -33,23 +33,20 @@ export default function Journal() {
   return (
     <section id="journal" ref={ref} className="bg-white py-12 md:py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-          <div>
-
-            <motion.h2 initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="font-clash text-[clamp(1.8rem,3.5vw,3rem)] font-500 leading-[1.02] text-[#083A7A]">
-              Stories from{" "}
-              <span className="font-cormorant italic font-400 text-[#D97706]">the valley.</span>
-            </motion.h2>
-          </div>
-          <div className="flex gap-2">
-            <NavBtn dir="prev" onClick={() => setIdx(i => (i - 1 + total) % total)} />
-            <NavBtn dir="next" onClick={() => setIdx(i => (i + 1) % total)} />
-          </div>
+        <div className="mb-8">
+          <motion.h2 initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="font-clash text-[clamp(1.8rem,3.5vw,3rem)] font-500 leading-[1.02] text-[#083A7A]">
+            Stories from{" "}
+            <span className="font-cormorant italic font-400 text-[#D97706]">the valley.</span>
+          </motion.h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div className="flex items-center gap-3 md:gap-4">
+          <div className="shrink-0">
+            <NavBtn dir="prev" onClick={() => setIdx(i => (i - 1 + total) % total)} />
+          </div>
+          <div className="flex-1 grid md:grid-cols-3 gap-6 md:gap-8">
           <AnimatePresence mode="wait">
             {shown.map((post, i) => (
               <motion.article key={`${idx}-${i}`}
@@ -72,6 +69,10 @@ export default function Journal() {
               </motion.article>
             ))}
           </AnimatePresence>
+          </div>
+          <div className="shrink-0">
+            <NavBtn dir="next" onClick={() => setIdx(i => (i + 1) % total)} />
+          </div>
         </div>
 
         <div className="flex gap-2 mt-6">

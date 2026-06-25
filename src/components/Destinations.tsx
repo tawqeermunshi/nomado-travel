@@ -213,7 +213,7 @@ export default function Destinations() {
             transition={{ delay: 0.3 }}
             className="text-[#4B5563] text-sm md:text-base leading-[1.7] max-w-xl"
           >
-            Two of the most extraordinary regions on earth. Select one to explore.
+            Two of the most extraordinary regions on earth.
           </motion.p>
         </div>
 
