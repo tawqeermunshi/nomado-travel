@@ -42,8 +42,8 @@ export default function Journal() {
           </motion.h2>
         </div>
 
-        <div className="flex items-center gap-3 md:gap-4">
-          <div className="shrink-0">
+        <div className="flex items-stretch gap-3 md:gap-4">
+          <div className="shrink-0 flex items-center">
             <NavBtn dir="prev" onClick={() => setIdx(i => (i - 1 + total) % total)} />
           </div>
           <div className="flex-1 grid md:grid-cols-3 gap-6 md:gap-8">
@@ -59,17 +59,13 @@ export default function Journal() {
                   </motion.div>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#083A7A]/50 to-transparent" />
                 </div>
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="font-clash text-[10px] tracking-[0.2em] uppercase text-[#6B7280]">{post.readTime} read</span>
-                  <span className="block flex-1 h-px bg-[#E2E8F0]" />
-                </div>
                 <h3 className="font-clash text-lg font-500 text-[#083A7A] leading-snug mb-2 group-hover:text-[#D97706] transition-colors duration-300">{post.title}</h3>
                 <p className="font-cormorant italic text-[#4B5563] text-sm leading-relaxed">{post.excerpt}</p>
               </motion.article>
             ))}
           </AnimatePresence>
           </div>
-          <div className="shrink-0">
+          <div className="shrink-0 flex items-center">
             <NavBtn dir="next" onClick={() => setIdx(i => (i + 1) % total)} />
           </div>
         </div>
