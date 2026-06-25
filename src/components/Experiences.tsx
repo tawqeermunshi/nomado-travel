@@ -105,7 +105,7 @@ export default function Experiences() {
           </div>
         </div>
 
-        <div className="flex gap-2 mt-6">
+        <div className="flex justify-center gap-2 mt-6">
           {experiences.map((_, i) => (
             <button key={i} onClick={() => setIdx(i)} aria-label={`Slide ${i + 1}`}
               className={`h-1 transition-all duration-300 ${i === idx ? "w-8 bg-[#D97706]" : "w-4 bg-[#CBD5E1]"}`} />

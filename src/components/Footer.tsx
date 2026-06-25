@@ -36,8 +36,8 @@ export default function Footer() {
           {/* Contact */}
           <div className="flex flex-col gap-4">
             <span className="font-clash text-[11px] tracking-[0.3em] uppercase text-[#F59E0B] mb-2">Reach Us</span>
-            <a href="mailto:hello@nomadotravel.com" className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD] hover:text-white transition-colors duration-300">
-              hello@nomadotravel.com
+            <a href="mailto:nomadotravels@gmail.com" className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD] hover:text-white transition-colors duration-300">
+              nomadotravels@gmail.com
             </a>
             <p className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD]">Srinagar, Kashmir</p>
             <div className="flex gap-3 mt-2">

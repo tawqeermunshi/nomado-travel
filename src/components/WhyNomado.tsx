@@ -64,13 +64,10 @@ export default function WhyNomado() {
               transition={{ duration: 0.7, delay: 0.25 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="py-5 md:py-6 group"
             >
-              <div className="flex items-center gap-4 mb-3">
-                <span className="block w-6 h-px bg-[#D97706]" />
-                <h3 className="font-clash text-3xl md:text-4xl font-500 text-[#083A7A] transition-colors duration-300 group-hover:text-[#0F4C9C]">
-                  {p.word}
-                </h3>
-              </div>
-              <p className="text-[#4B5563] text-base leading-[1.8] max-w-md md:pl-10">{p.desc}</p>
+              <h3 className="font-clash text-3xl md:text-4xl font-500 text-[#083A7A] transition-colors duration-300 group-hover:text-[#0F4C9C] mb-3">
+                {p.word}
+              </h3>
+              <p className="text-[#4B5563] text-base leading-[1.8] max-w-md">{p.desc}</p>
             </motion.div>
           ))}
         </div>
