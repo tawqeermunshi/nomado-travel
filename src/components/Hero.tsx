@@ -29,7 +29,7 @@ export default function Hero() {
   const current = quotes[index];
 
   return (
-    <section ref={ref} className="relative h-[82vh] w-full overflow-hidden">
+    <section ref={ref} className="relative h-screen w-full overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0 h-[105%]">
         <div className="relative h-full w-full">
           <Image
@@ -37,7 +37,7 @@ export default function Hero() {
             alt="Houseboats on Dal Lake against snow-capped mountains, Srinagar"
             fill
             priority
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
         </div>
       </motion.div>
