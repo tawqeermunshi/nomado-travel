@@ -2,7 +2,7 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#083A7A] border-t border-[#0F4C9C]/50 px-6 md:px-12 lg:px-20 py-20">
+    <footer id="reach-us" className="bg-[#083A7A] border-t border-[#0F4C9C]/50 px-6 md:px-12 lg:px-20 py-20 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div id="reach-us" className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <span className="font-clash text-[11px] tracking-[0.3em] uppercase text-[#F59E0B] mb-2">Reach Us</span>
             <a href="mailto:nomadotravels@gmail.com" className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD] hover:text-white transition-colors duration-300">
               nomadotravels@gmail.com
