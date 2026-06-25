@@ -5,10 +5,10 @@ import { asset } from "@/lib/asset";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const quotes = [
-  { lang: "English",  dir: "ltr" as const, text: "\u201cIf there is a paradise on earth, it is here, it is here, it is here.\u201d" },
+  { lang: "English",  dir: "ltr" as const, text: "If there is a paradise on earth, it is here, it is here, it is here." },
   { lang: "Farsi",    dir: "rtl" as const, text: "گر فردوس بر روی زمین است همین است و همین است و همین است" },
-  { lang: "Hindi",    dir: "ltr" as const, text: "«अगर धरती पर कहीं स्वर्ग है, तो यहीं है, यहीं है, यहीं है»" },
-  { lang: "Japanese", dir: "ltr" as const, text: "\u300c\u5730\u4e0a\u306b\u697d\u5712\u304c\u3042\u308b\u3068\u3059\u308c\u3070\u3001\u305d\u308c\u306f\u3053\u3053\u3060\u3001\u3053\u3053\u3060\u3001\u3053\u3053\u3060\u3002\u300d" },
+  { lang: "Hindi",    dir: "ltr" as const, text: "अगर धरती पर कहीं स्वर्ग है, तो यहीं है, यहीं है, यहीं है" },
+  { lang: "Japanese", dir: "ltr" as const, text: "\u5730\u4e0a\u306b\u697d\u5712\u304c\u3042\u308b\u3068\u3059\u308c\u3070\u3001\u305d\u308c\u306f\u3053\u3053\u3060\u3001\u3053\u3053\u3060\u3001\u3053\u3053\u3060" },
 ];
 
 const INTERVAL = 4250;
