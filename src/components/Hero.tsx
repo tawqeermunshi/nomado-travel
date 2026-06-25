@@ -5,10 +5,10 @@ import { asset } from "@/lib/asset";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const quotes = [
-  { lang: “English”,  dir: “ltr” as const, text: “”If there is a paradise on earth, it is here, it is here, it is here.”” },
-  { lang: “Farsi”,    dir: “rtl” as const, text: “«اگر بر روی زمین هست، همین‌جاست، همین‌جاست، همین‌جاست»” },
-  { lang: “Hindi”,    dir: “ltr” as const, text: “«अगर धरती पर कहीं स्वर्ग है, तो यहीं है, यहीं है, यहीं है»” },
-  { lang: “Japanese”, dir: “ltr” as const, text: “「地上に楽園があるとすれば、それはここだ、ここだ、ここだ。」” },
+  { lang: "English",  dir: "ltr" as const, text: "\u201cIf there is a paradise on earth, it is here, it is here, it is here.\u201d" },
+  { lang: "Farsi",    dir: "rtl" as const, text: "«اگر بر روی زمین هست، همین‌جاست، همین‌جاست، همین‌جاست»" },
+  { lang: "Hindi",    dir: "ltr" as const, text: "«अगर धरती पर कहीं स्वर्ग है, तो यहीं है, यहीं है, यहीं है»" },
+  { lang: "Japanese", dir: "ltr" as const, text: "\u300c\u5730\u4e0a\u306b\u697d\u5712\u304c\u3042\u308b\u3068\u3059\u308c\u3070\u3001\u305d\u308c\u306f\u3053\u3053\u3060\u3001\u3053\u3053\u3060\u3001\u3053\u3053\u3060\u3002\u300d" },
 ];
 
 const INTERVAL = 3400;
@@ -57,7 +57,6 @@ export default function Hero() {
         className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-16 text-center"
       >
         <div className="max-w-3xl w-full">
-          {/* Animated multilingual quote — main text */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -84,7 +83,6 @@ export default function Hero() {
             </AnimatePresence>
           </motion.div>
 
-          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
