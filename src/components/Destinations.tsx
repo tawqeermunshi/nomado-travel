@@ -25,7 +25,7 @@ const regions = [
     name: "Ladakh",
     tagline: "The Land of High Passes",
     desc: "Moonscapes, monasteries, turquoise lakes, and a silence that recalibrates something deep inside you.",
-    image: "/images/mountain-lake.jpg",
+    image: "/images/ladakh.jpg",
     destinations: [
       { name: "Leh", desc: "Ancient monasteries under cobalt skies", image: "/images/houses-mountain.jpg" },
       { name: "Kargil", desc: "Where cultures converge", image: "/images/oldcity.jpg" },
