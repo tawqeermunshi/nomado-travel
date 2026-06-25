@@ -30,9 +30,9 @@ export default function Hero() {
 
   return (
     <section ref={ref} className="relative h-[82vh] w-full overflow-hidden">
-      <motion.div style={{ y }} className="absolute inset-0 h-[120%]">
+      <motion.div style={{ y }} className="absolute inset-0 h-[110%]">
         <motion.div
-          initial={{ scale: 1.12 }}
+          initial={{ scale: 1.04 }}
           animate={{ scale: 1 }}
           transition={{ duration: 8, ease: "easeOut" }}
           className="relative h-full w-full"
