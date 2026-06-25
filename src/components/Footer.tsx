@@ -39,6 +39,9 @@ export default function Footer() {
             <a href="mailto:nomadotravels@gmail.com" className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD] hover:text-white transition-colors duration-300">
               nomadotravels@gmail.com
             </a>
+            <a href="tel:+917006712010" className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD] hover:text-white transition-colors duration-300">
+              +91 7006712010
+            </a>
             <p className="font-clash text-[12px] tracking-[0.1em] text-[#B6C6DD]">Srinagar, Kashmir</p>
             <div className="flex gap-3 mt-2">
               <a href="https://www.instagram.com/nomado.travel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 border border-[#2A5599] hover:border-[#F59E0B]/50 flex items-center justify-center text-[#B6C6DD] hover:text-[#F59E0B] transition-colors duration-300">
