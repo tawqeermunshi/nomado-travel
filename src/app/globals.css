@@ -18,7 +18,10 @@
 html { scroll-behavior: smooth; }
 
 .font-century { font-family: 'Century Gothic', CenturyGothic, 'Nunito', AppleGothic, sans-serif; }
-.font-century-bold { font-family: 'Century Gothic', CenturyGothic, 'Nunito', AppleGothic, sans-serif; font-weight: 900; -webkit-text-stroke: 0.4px currentColor; }
+.font-century-bold { font-family: 'Century Gothic', CenturyGothic, 'Nunito', AppleGothic, sans-serif; font-weight: 900; -webkit-text-stroke: 0.7px currentColor; }
+@media (max-width: 767px) {
+  .font-century-bold { -webkit-text-stroke: 0.9px currentColor; }
+}
 
 body {
   background-color: var(--white);
