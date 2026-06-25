@@ -35,10 +35,7 @@ export default function Journal() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
           <div>
-            <motion.span initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}
-              className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-4">
-              Journal
-            </motion.span>
+
             <motion.h2 initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="font-clash text-[clamp(1.8rem,3.5vw,3rem)] font-500 leading-[1.02] text-[#083A7A]">

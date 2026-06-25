@@ -79,13 +79,7 @@ export default function Contact() {
         {/* Right: form */}
         <div className="px-6 md:px-16 lg:px-20 py-10 md:py-14 flex flex-col justify-center">
           <div className="max-w-xl mx-auto w-full">
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-6"
-            >
-              — Make an Enquiry
-            </motion.span>
+
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}

@@ -57,26 +57,12 @@ export default function Hero() {
         className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-16 text-center"
       >
         <div className="max-w-3xl w-full">
-          {/* Eyebrow */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex items-center justify-center gap-4 mb-8"
-          >
-            <span className="block w-8 h-px bg-[#D97706]" />
-            <span className="font-clash text-[10px] tracking-[0.45em] uppercase text-[#C9D9E8]/70">
-              Kashmir · Curated Journeys
-            </span>
-            <span className="block w-8 h-px bg-[#D97706]" />
-          </motion.div>
-
           {/* Animated multilingual quote — main text */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="relative h-28 md:h-24 overflow-hidden mb-10"
+            transition={{ delay: 0.5 }}
+            className="relative h-36 md:h-28 overflow-hidden mb-12"
           >
             <AnimatePresence mode="wait">
               <motion.blockquote
@@ -86,9 +72,9 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0,  filter: "blur(0px)" }}
                 exit={{   opacity: 0, y: -18, filter: "blur(6px)" }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute inset-0 flex flex-col items-center justify-center gap-3"
+                className="absolute inset-0 flex flex-col items-center justify-center gap-4"
               >
-                <p className="font-cormorant italic text-[#F5F9FD] text-[clamp(1.2rem,3.2vw,2rem)] leading-snug">
+                <p className="font-cormorant italic text-[#F5F9FD] text-[clamp(1.4rem,3.8vw,2.4rem)] leading-snug">
                   {current.text}
                 </p>
                 <span className="font-clash text-[9px] tracking-[0.35em] uppercase text-[#F59E0B]/60">
@@ -102,11 +88,11 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 1.1 }}
+            transition={{ duration: 0.7, delay: 1.0 }}
           >
             <a
               href="#contact"
-              className="font-clash text-[12px] tracking-[0.15em] uppercase px-8 py-4 bg-[#D97706] text-white hover:bg-[#F59E0B] transition-all duration-300"
+              className="font-clash text-[13px] tracking-[0.15em] uppercase px-10 py-5 bg-[#D97706] text-white hover:bg-[#F59E0B] transition-all duration-300"
             >
               Make an Enquiry
             </a>

@@ -69,13 +69,7 @@ export default function Experiences() {
     <section id="experiences" className="bg-[#FAFAF8] py-12 md:py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div ref={ref} className="max-w-3xl mb-8 md:mb-10">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-4"
-          >
-            Experiences
-          </motion.span>
+
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}

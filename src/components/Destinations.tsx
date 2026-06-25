@@ -197,13 +197,7 @@ export default function Destinations() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="max-w-3xl mb-8 md:mb-10">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706] block mb-4"
-          >
-            Destinations
-          </motion.span>
+
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}

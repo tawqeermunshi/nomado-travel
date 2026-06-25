@@ -28,16 +28,6 @@ export default function WhyNomado() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-10 md:gap-16">
         {/* Left: image + heading */}
         <div className="md:col-span-5">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            className="flex items-center gap-3 mb-8"
-          >
-            <span className="block w-8 h-px bg-[#D97706]" />
-            <span className="font-clash text-[11px] tracking-[0.4em] uppercase text-[#D97706]">
-              Why Nomado
-            </span>
-          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
