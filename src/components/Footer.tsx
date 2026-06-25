@@ -1,4 +1,3 @@
-import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -7,12 +6,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-5">
-              <Logo className="w-10 h-10" />
-              <div className="flex flex-col leading-none">
-                <span className="font-clash text-2xl font-700 text-[#F5F9FD]" style={{ letterSpacing: "0.18em" }}>NOMADO</span>
-                <span className="font-clash text-[9px] font-500 text-[#F59E0B] mt-1" style={{ letterSpacing: "0.55em" }}>TRAVEL</span>
-              </div>
+            <div className="mb-5">
+              <span className="font-clash text-[1.3rem] font-400 text-[#F5F9FD] tracking-wide">nomado.travel</span>
             </div>
             <p className="font-cormorant text-base italic text-[#B6C6DD] leading-relaxed max-w-xs">
               Curating immersive journeys through the many layers of Kashmir — its people, traditions, landscapes, and stories.

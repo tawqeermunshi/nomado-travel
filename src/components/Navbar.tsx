@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "./Logo";
 
 const links = ["Destinations", "Experiences", "Journal", "Contact"];
 const linkHrefs: Record<string, string> = { Contact: "#reach-us" };
@@ -27,16 +26,8 @@ export default function Navbar() {
         }`}
       >
         {/* Brand */}
-        <a href="#" className="flex items-center gap-3 group">
-          <Logo className="w-9 h-9 md:w-10 md:h-10 transition-transform duration-500 group-hover:rotate-[8deg]" />
-          <span className="flex flex-col leading-none">
-            <span className="font-clash text-[1.35rem] md:text-[1.55rem] font-700 text-[#F5F9FD]" style={{ letterSpacing: "0.18em" }}>
-              NOMADO
-            </span>
-            <span className="font-clash text-[8px] md:text-[9px] font-500 text-[#F59E0B] mt-1" style={{ letterSpacing: "0.55em" }}>
-              TRAVEL
-            </span>
-          </span>
+        <a href="#" className="font-clash text-[1.15rem] md:text-[1.3rem] font-400 text-[#F5F9FD] tracking-wide hover:text-[#F59E0B] transition-colors duration-300">
+          nomado.travel
         </a>
 
         {/* Desktop links */}
