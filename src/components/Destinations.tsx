@@ -12,12 +12,12 @@ const regions = [
     desc: "Houseboats on Dal Lake, saffron fields, Mughal gardens, and mountains that touch the clouds.",
     image: "/images/hero.jpg",
     destinations: [
-      { name: "Gulmarg", desc: "Ski slopes & alpine meadows" },
-      { name: "Pahalgam", desc: "The shepherd's meadow" },
-      { name: "Sonmarg", desc: "Gateway to the glaciers" },
-      { name: "Srinagar", desc: "Houseboats & walled city" },
-      { name: "Doodhpathri", desc: "Untouched rolling meadows" },
-      { name: "Yousmarg", desc: "Pine forests & wildflowers" },
+      { name: "Gulmarg", desc: "Ski slopes & alpine meadows", image: "/images/snow-village.jpg" },
+      { name: "Pahalgam", desc: "The shepherd's meadow", image: "/images/forest.jpg" },
+      { name: "Sonmarg", desc: "Gateway to the glaciers", image: "/images/mountain-lake.jpg" },
+      { name: "Srinagar", desc: "Houseboats & walled city", image: "/images/houses-lake.jpg" },
+      { name: "Doodhpathri", desc: "Untouched rolling meadows", image: "/images/leaves.jpg" },
+      { name: "Yousmarg", desc: "Pine forests & wildflowers", image: "/images/village.jpg" },
     ],
   },
   {
@@ -27,22 +27,166 @@ const regions = [
     desc: "Moonscapes, monasteries, turquoise lakes, and a silence that recalibrates something deep inside you.",
     image: "/images/mountain-lake.jpg",
     destinations: [
-      { name: "Leh", desc: "Ancient monasteries under cobalt skies" },
-      { name: "Kargil", desc: "Where cultures converge" },
-      { name: "Nubra Valley", desc: "Sand dunes & Bactrian camels" },
-      { name: "Turtuk", desc: "A Balti village at the edge of the world" },
-      { name: "Pangong", desc: "The highest saltwater lake" },
-      { name: "Hanle", desc: "Dark skies & ancient monastery" },
+      { name: "Leh", desc: "Ancient monasteries under cobalt skies", image: "/images/houses-mountain.jpg" },
+      { name: "Kargil", desc: "Where cultures converge", image: "/images/oldcity.jpg" },
+      { name: "Nubra Valley", desc: "Sand dunes & Bactrian camels", image: "/images/snow.jpg" },
+      { name: "Turtuk", desc: "A Balti village at the edge of the world", image: "/images/weaving.jpg" },
+      { name: "Pangong", desc: "The highest saltwater lake", image: "/images/dal-lake.jpg" },
+      { name: "Hanle", desc: "Dark skies & ancient monastery", image: "/images/houses-mountain.jpg" },
     ],
   },
 ];
+
+type Region = typeof regions[0];
+
+function RegionTile({ region, onClick, inView, delay }: { region: Region; onClick: () => void; inView: boolean; delay: number }) {
+  return (
+    <motion.button
+      initial={{ opacity: 0, y: 40 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
+      onClick={onClick}
+      className="relative w-full text-left group overflow-hidden focus:outline-none"
+    >
+      <div className="relative h-[58vh] md:h-[68vh] overflow-hidden">
+        <motion.div
+          whileHover={{ scale: 1.04 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute inset-0"
+        >
+          <Image src={asset(region.image)} alt={region.name} fill className="object-cover" sizes="50vw" />
+        </motion.div>
+
+        {/* Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#06172E]/95 via-[#06172E]/30 to-[#06172E]/10 group-hover:from-[#06172E]/[0.98] transition-all duration-700" />
+
+        {/* Content */}
+        <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10 lg:p-12">
+          <p className="font-cormorant italic text-[#F59E0B] text-base mb-2 opacity-90">{region.tagline}</p>
+          <h3 className="font-clash text-[clamp(2.4rem,4.5vw,4rem)] font-600 text-[#F5F9FD] leading-none mb-4">
+            {region.name}
+          </h3>
+          <p className="font-cormorant italic text-[#C9D9E8]/75 text-base md:text-lg leading-relaxed max-w-xs mb-8">
+            {region.desc}
+          </p>
+
+          {/* CTA */}
+          <div className="flex items-center gap-4">
+            <span className="block w-8 h-px bg-[#D97706]" />
+            <span className="font-clash text-[11px] tracking-[0.3em] uppercase text-[#F59E0B] group-hover:tracking-[0.4em] transition-all duration-500">
+              Explore
+            </span>
+          </div>
+        </div>
+      </div>
+    </motion.button>
+  );
+}
+
+function ExpandedRegion({ region, onClose }: { region: Region; onClose: () => void }) {
+  return (
+    <motion.div
+      key="expanded"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.45 }}
+      className="relative w-full overflow-hidden bg-[#06172E]"
+    >
+      {/* Faint background image */}
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        <Image src={asset(region.image)} alt="" fill className="object-cover scale-110 blur-sm" />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#06172E]/80 to-[#06172E]/60" />
+
+      <div className="relative z-10 px-6 md:px-12 lg:px-20 pt-14 pb-16">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-12 md:mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <p className="font-cormorant italic text-[#F59E0B] text-base mb-2">{region.tagline}</p>
+            <h3 className="font-clash text-[clamp(2.4rem,5vw,4.5rem)] font-600 text-[#F5F9FD] leading-none">
+              {region.name}
+            </h3>
+          </motion.div>
+
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            onClick={onClose}
+            className="flex items-center gap-2 font-clash text-[11px] tracking-[0.25em] uppercase text-[#9DB2C7] hover:text-[#F5F9FD] transition-colors duration-300 mt-2"
+          >
+            <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path strokeLinecap="round" d="M15 5L5 15M5 5l10 10" />
+            </svg>
+            Close
+          </motion.button>
+        </div>
+
+        {/* Destination filmstrip */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
+          {region.destinations.map((dest, i) => (
+            <motion.div
+              key={dest.name}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.15 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+              className="group/card relative overflow-hidden"
+            >
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <motion.div
+                  whileHover={{ scale: 1.07 }}
+                  transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={asset(dest.image)}
+                    alt={dest.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width:640px) 50vw, (max-width:1024px) 33vw, 16vw"
+                  />
+                </motion.div>
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06172E]/95 via-[#06172E]/25 to-transparent group-hover/card:from-[#06172E]/[0.98] transition-all duration-500" />
+
+                {/* Saffron top accent line on hover */}
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute top-0 left-0 right-0 h-0.5 bg-[#D97706] origin-left"
+                />
+
+                {/* Text */}
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 className="font-clash text-sm md:text-base font-600 text-[#F5F9FD] leading-tight mb-1">
+                    {dest.name}
+                  </h4>
+                  <p className="font-cormorant italic text-[#C9D9E8]/65 text-xs md:text-sm leading-snug">
+                    {dest.desc}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function Destinations() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [open, setOpen] = useState<string | null>(null);
 
-  const toggle = (id: string) => setOpen(prev => (prev === id ? null : id));
+  const activeRegion = regions.find(r => r.id === open) ?? null;
 
   return (
     <section id="destinations" ref={ref} className="bg-white py-32 md:py-48 px-6 md:px-12 lg:px-20">
@@ -71,107 +215,41 @@ export default function Destinations() {
             transition={{ delay: 0.3 }}
             className="text-[#4B5563] text-base md:text-lg leading-[1.8] max-w-xl mt-8"
           >
-            Two of the most extraordinary regions on earth. Click to explore.
+            Two of the most extraordinary regions on earth. Select one to explore.
           </motion.p>
         </div>
 
-        {/* Region tiles */}
-        <div className="grid md:grid-cols-2 gap-5 md:gap-6">
-          {regions.map((region, ri) => (
+        {/* Content */}
+        <AnimatePresence mode="wait">
+          {!open ? (
             <motion.div
-              key={region.id}
-              initial={{ opacity: 0, y: 40 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: ri * 0.15, ease: [0.22, 1, 0.36, 1] }}
+              key="tiles"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="grid md:grid-cols-2 gap-5 md:gap-6"
             >
-              {/* Main tile */}
-              <button
-                onClick={() => toggle(region.id)}
-                className="relative w-full text-left overflow-hidden group focus:outline-none"
-                aria-expanded={open === region.id}
-              >
-                <div className="relative h-[52vh] md:h-[62vh] overflow-hidden">
-                  <motion.div
-                    animate={{ scale: open === region.id ? 1.04 : 1 }}
-                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute inset-0"
-                  >
-                    <Image
-                      src={asset(region.image)}
-                      alt={region.name}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width:768px) 100vw, 50vw"
-                    />
-                  </motion.div>
-
-                  {/* Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#072350]/90 via-[#072350]/30 to-[#072350]/10 transition-all duration-500 group-hover:from-[#072350]/95" />
-
-                  {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
-                    <p className="font-cormorant italic text-[#F59E0B] text-base mb-2">{region.tagline}</p>
-                    <h3 className="font-clash text-[clamp(2rem,4vw,3.2rem)] font-600 text-[#F5F9FD] leading-tight mb-3">
-                      {region.name}
-                    </h3>
-                    <p className="font-cormorant italic text-[#C9D9E8]/80 text-base leading-relaxed max-w-sm mb-6">
-                      {region.desc}
-                    </p>
-
-                    {/* Expand indicator */}
-                    <div className="flex items-center gap-3">
-                      <span className="font-clash text-[11px] tracking-[0.2em] uppercase text-[#F59E0B]">
-                        {open === region.id ? "Close" : "Explore destinations"}
-                      </span>
-                      <motion.span
-                        animate={{ rotate: open === region.id ? 45 : 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="text-[#F59E0B] text-lg leading-none"
-                      >
-                        +
-                      </motion.span>
-                    </div>
-                  </div>
-                </div>
-              </button>
-
-              {/* Expanded destinations panel */}
-              <AnimatePresence>
-                {open === region.id && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                    className="overflow-hidden bg-[#F5F8FD] border border-t-0 border-[#E2E8F0]"
-                  >
-                    <div className="p-6 md:p-8">
-                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                        {region.destinations.map((dest, di) => (
-                          <motion.div
-                            key={dest.name}
-                            initial={{ opacity: 0, y: 12 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: di * 0.06, duration: 0.4 }}
-                            className="group/dest border border-[#E2E8F0] bg-white p-4 hover:border-[#D97706]/50 hover:bg-[#D97706]/[0.03] transition-all duration-300"
-                          >
-                            <div className="flex items-start justify-between mb-1">
-                              <h4 className="font-clash text-sm font-600 text-[#083A7A] group-hover/dest:text-[#D97706] transition-colors duration-300">
-                                {dest.name}
-                              </h4>
-                              <span className="text-[#D97706]/50 text-xs group-hover/dest:text-[#D97706] transition-colors">→</span>
-                            </div>
-                            <p className="font-cormorant italic text-[#6B7280] text-sm leading-snug">{dest.desc}</p>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {regions.map((region, ri) => (
+                <RegionTile
+                  key={region.id}
+                  region={region}
+                  onClick={() => setOpen(region.id)}
+                  inView={inView}
+                  delay={ri * 0.15}
+                />
+              ))}
             </motion.div>
-          ))}
-        </div>
+          ) : (
+            activeRegion && (
+              <ExpandedRegion
+                key="expanded"
+                region={activeRegion}
+                onClose={() => setOpen(null)}
+              />
+            )
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
