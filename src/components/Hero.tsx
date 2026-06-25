@@ -48,8 +48,8 @@ export default function Hero() {
       </motion.div>
 
       <motion.div style={{ opacity: scrimOpacity }} className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#072350]/70 via-transparent to-[#072350]/95" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#072350]/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#072350]/80 via-[#072350]/50 to-[#072350]/95" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#072350]/40 via-transparent to-transparent" />
       </motion.div>
 
       <motion.div
@@ -73,7 +73,7 @@ export default function Hero() {
                 transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
                 className="absolute inset-0 flex flex-col items-center justify-center gap-4"
               >
-                <p className="font-cormorant italic text-[#F5F9FD] text-[clamp(1.4rem,3.8vw,2.4rem)] leading-snug">
+                <p className="font-cormorant italic text-[#F5F9FD] text-[clamp(1.4rem,3.8vw,2.4rem)] leading-snug" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.95)" }}>
                   {current.text}
                 </p>
               </motion.blockquote>
