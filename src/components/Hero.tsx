@@ -99,16 +99,10 @@ export default function Hero() {
             className="flex flex-wrap gap-4"
           >
             <a
-              href="#experiences"
+              href="#contact"
               className="font-clash text-[12px] tracking-[0.15em] uppercase px-8 py-4 bg-[#D97706] text-white hover:bg-[#F59E0B] transition-all duration-300"
             >
-              Explore Experiences
-            </a>
-            <a
-              href="#about"
-              className="font-clash text-[12px] tracking-[0.15em] uppercase px-8 py-4 border border-[#F5F9FD]/40 text-[#F5F9FD] hover:bg-[#F5F9FD]/10 transition-all duration-300"
-            >
-              Our Story
+              Plan Journey
             </a>
           </motion.div>
         </div>

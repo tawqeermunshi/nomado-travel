@@ -69,7 +69,7 @@ function WayCard({ way, index, inView }: { way: typeof ways[0]; index: number; i
             {way.items.map(item => (
               <li
                 key={item}
-                className="font-clash text-[10px] tracking-[0.15em] uppercase px-2.5 py-1 border border-[#F59E0B]/40 text-[#F59E0B]/80"
+                className="font-clash text-[10px] tracking-[0.15em] uppercase px-2.5 py-1 bg-[#D97706] text-white font-600"
               >
                 {item}
               </li>
