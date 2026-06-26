@@ -80,7 +80,7 @@ export default function Experiences() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.45, delay: i * 0.07 }}
-                className="group relative flex flex-col h-[64vh] overflow-hidden rounded-3xl bg-[#072350] shadow-[0_10px_30px_-12px_rgba(8,58,122,0.35)] hover:shadow-[0_20px_45px_-12px_rgba(8,58,122,0.45)] transition-shadow duration-500"
+                className="group relative flex flex-col h-[58vh] overflow-hidden rounded-3xl bg-[#072350] shadow-[0_10px_30px_-12px_rgba(8,58,122,0.35)] hover:shadow-[0_20px_45px_-12px_rgba(8,58,122,0.45)] transition-shadow duration-500"
               >
                 <div className="relative flex-1 overflow-hidden">
                   <motion.div
