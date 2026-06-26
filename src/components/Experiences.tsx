@@ -80,9 +80,9 @@ export default function Experiences() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.45, delay: i * 0.07 }}
-                className="group relative overflow-hidden rounded-3xl shadow-[0_10px_30px_-12px_rgba(8,58,122,0.35)] hover:shadow-[0_20px_45px_-12px_rgba(8,58,122,0.45)] transition-shadow duration-500"
+                className="group relative flex flex-col h-[48vh] overflow-hidden rounded-3xl bg-[#072350] shadow-[0_10px_30px_-12px_rgba(8,58,122,0.35)] hover:shadow-[0_20px_45px_-12px_rgba(8,58,122,0.45)] transition-shadow duration-500"
               >
-                <div className="relative h-[48vh] overflow-hidden rounded-3xl">
+                <div className="relative flex-1 overflow-hidden">
                   <motion.div
                     whileHover={{ scale: 1.04 }}
                     transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -96,15 +96,15 @@ export default function Experiences() {
                       sizes="(max-width:768px) 100vw, 33vw"
                     />
                   </motion.div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#072350]/95 via-[#072350]/25 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                    <h3 className="font-clash text-lg md:text-xl font-600 text-[#F5F9FD] leading-tight mb-2">
-                      {exp.title}
-                    </h3>
-                    <p className="font-cormorant italic text-[#C9D9E8]/80 text-sm md:text-base leading-relaxed">
-                      {exp.desc}
-                    </p>
-                  </div>
+                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#072350] to-transparent" />
+                </div>
+                <div className="bg-[#072350] px-5 md:px-6 pb-5 md:pb-6 pt-1">
+                  <h3 className="font-clash text-lg md:text-xl font-600 text-[#F5F9FD] leading-tight mb-2">
+                    {exp.title}
+                  </h3>
+                  <p className="font-cormorant italic text-[#C9D9E8] text-sm md:text-base leading-relaxed">
+                    {exp.desc}
+                  </p>
                 </div>
               </motion.article>
             ))}
