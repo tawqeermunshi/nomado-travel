@@ -5,13 +5,13 @@ import { asset } from "@/lib/asset";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const experiences = [
-  { title: "Downtown Safari",      image: "/images/oldcity.jpg",     desc: "Walk the old city's lanes — mosques, Mughal terraces, the wooden bridges of the Jhelum." },
-  { title: "Mughal Gardens",       image: "/images/forest.jpg",      desc: "Terraced gardens, fountains, and chinar groves built for emperors who loved beauty." },
-  { title: "Temple & Shrine Tours",image: "/images/mountain-lake.jpg",desc: "Ancient shrines, Sufi dargahs, and hilltop temples steeped in living devotion." },
-  { title: "Craft Safari",         image: "/images/textiles.jpg",    desc: "Visit carpet weavers, Pashmina spinners, and Papier Maché artists at work in their studios." },
-  { title: "Wood Carving Ateliers",image: "/images/weaving.jpg",     desc: "Watch master carvers transform walnut wood into heirlooms, then take a piece home." },
+  { title: "Downtown Safari",      image: "/images/downtown.jpg",    desc: "Walk the old city's lanes — mosques, Mughal terraces, the wooden bridges of the Jhelum." },
+  { title: "Mughal Gardens",       image: "/images/mughal-garden.jpg",desc: "Terraced gardens, fountains, and chinar groves built for emperors who loved beauty." },
+  { title: "Temple & Shrine Tours",image: "/images/shrine.jpg",      desc: "Ancient shrines, Sufi dargahs, and hilltop temples steeped in living devotion." },
+  { title: "Craft Safari",         image: "/images/craft.jpg",       desc: "Visit carpet weavers, Pashmina spinners, and Papier Maché artists at work in their studios." },
+  { title: "Wood Carving Ateliers",image: "/images/wood-carving.jpg",desc: "Watch master carvers transform walnut wood into heirlooms, then take a piece home." },
   { title: "Wazwan Feast",         image: "/images/wazwan-new.jpg",  desc: "The ceremonial multi-course banquet of Kashmir, eaten together from a shared platter." },
-  { title: "Bakeries & Cafés",     image: "/images/village.jpg",     desc: "Girda bread at sunrise, kahwa at a lakeside café — the everyday flavours of Srinagar." },
+  { title: "Bakeries & Cafés",     image: "/images/cafe.jpg",        desc: "Girda bread at sunrise, kahwa at a lakeside café — the everyday flavours of Srinagar." },
   { title: "Home Kitchen Visits",  image: "/images/houses-lake.jpg", desc: "Cook alongside Kashmiri families and eat as they eat — unhurried, generous, real." },
 ];
 
