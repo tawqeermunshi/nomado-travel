@@ -84,14 +84,8 @@ function ExpandedRegion({ region, onClose }: { region: Region; onClose: () => vo
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.45 }}
-      className="relative w-full overflow-hidden bg-[#06172E]"
+      className="relative w-full overflow-hidden bg-white"
     >
-      {/* Faint background image */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <Image src={asset(region.image)} alt="" fill className="object-cover scale-110 blur-sm" />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#06172E]/80 to-[#06172E]/60" />
-
       <div className="relative z-10 px-6 md:px-12 lg:px-20 pt-14 pb-16">
         {/* Header */}
         <div className="flex items-start justify-between mb-12 md:mb-16">
@@ -100,7 +94,7 @@ function ExpandedRegion({ region, onClose }: { region: Region; onClose: () => vo
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h3 className="font-clash text-[clamp(2.4rem,5vw,4.5rem)] font-600 text-[#F5F9FD] leading-none">
+            <h3 className="font-clash text-[clamp(2.4rem,5vw,4.5rem)] font-600 text-[#083A7A] leading-none">
               {region.name}
             </h3>
           </motion.div>
@@ -110,7 +104,7 @@ function ExpandedRegion({ region, onClose }: { region: Region; onClose: () => vo
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
             onClick={onClose}
-            className="flex items-center gap-2 font-clash text-[11px] tracking-[0.25em] uppercase text-[#9DB2C7] hover:text-[#F5F9FD] transition-colors duration-300 mt-2"
+            className="flex items-center gap-2 font-clash text-[11px] tracking-[0.25em] uppercase text-[#6B7280] hover:text-[#083A7A] transition-colors duration-300 mt-2"
           >
             <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path strokeLinecap="round" d="M15 5L5 15M5 5l10 10" />
@@ -160,7 +154,7 @@ function ExpandedRegion({ region, onClose }: { region: Region; onClose: () => vo
                   <h4 className="font-clash text-sm md:text-base font-600 text-[#F5F9FD] leading-tight mb-1">
                     {dest.name}
                   </h4>
-                  <p className="font-cormorant italic text-[#C9D9E8]/65 text-xs md:text-sm leading-snug">
+                  <p className="text-[#E5EDF5]/85 text-xs md:text-sm leading-snug">
                     {dest.desc}
                   </p>
                 </div>
