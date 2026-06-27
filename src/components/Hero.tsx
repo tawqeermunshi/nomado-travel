@@ -11,7 +11,7 @@ export default function Hero() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   return (
-    <section ref={ref} className="relative h-[80vh] w-full overflow-hidden">
+    <section ref={ref} className="relative h-screen w-full overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0 h-[105%]">
         <div className="relative h-full w-full">
           <video
