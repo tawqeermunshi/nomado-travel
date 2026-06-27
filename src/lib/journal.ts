@@ -63,7 +63,7 @@ export const posts: Post[] = [
     title: "The Royal Feast: Inside Kashmir's Legendary Wazwan",
     excerpt:
       "A single copper trami, shared between four, piled with rice and slow-cooked meat. Inside the multi-course ceremony that commands every Kashmiri wedding.",
-    image: "/images/wazwan.jpg",
+    image: "/images/wazwan-new.jpg",
     body: [
       { type: "p", text: "There's a moment at every Kashmiri wedding when the trami arrives — a single large copper plate, shared between four guests, piled high with rice and meticulously arranged meat dishes. Conversation pauses. This is the Wazwan, and once it begins, it commands the room." },
       { type: "h", text: "A Feast Built on Ceremony" },
