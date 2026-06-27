@@ -3,12 +3,10 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const testimonials = [
-  { quote: "Nomado showed us a Kashmir we didn't know existed — a morning with a Pashmina weaver, dinner in a family home in Gurez. Nothing felt staged, everything felt true.", name: "Priya & Arjun Mehta",   place: "Mumbai, India",    trip: "Craft & Village Journey"   },
-  { quote: "I've travelled a great deal, but the unhurried pace here changed how I think about travel itself. Our host knew every lane of the old city by heart.",                 name: "Sarah Lindqvist",      place: "Stockholm, Sweden", trip: "Downtown Srinagar Walks"    },
-  { quote: "The photography expedition was extraordinary. We stood at Yusmarg before sunrise with not another soul in sight. Worth every single early morning.",                   name: "Daniel Okafor",        place: "London, UK",        trip: "Photography Expedition"     },
-  { quote: "We came for Gulmarg but left with a deeper love for Kashmir itself — its people, its food, its resilience. Nomado made it feel personal from day one.",               name: "Rina & Kenji Watanabe",place: "Tokyo, Japan",      trip: "Winter Kashmir"             },
-  { quote: "The Wazwan experience in a local home was unlike anything I've experienced in 30 years of travel. Generosity doesn't quite capture it.",                              name: "Fatima Al-Rashid",     place: "Dubai, UAE",        trip: "Culinary Journey"           },
-  { quote: "Every detail felt considered — from the family we stayed with to the craftsman who taught us to knot a carpet. Nothing felt like a tourist box-tick.",                name: "Marcus & Leila Dubois",place: "Paris, France",     trip: "Heritage & Craft Trail"    },
+  { quote: "We had a lovely experience in Kashmir.. From hotel to pick up, the driver and food, everything was taken utmost care. We just decided 2 days ahead of travelling and Nomado gave us a very good package !! Thanks for making our trip a memorable one !! Will surely recommend friends and relatives.", name: "Fatima Em",          place: "Mangalore, India"  },
+  { quote: "The team's attentiveness and commitment to customer satisfaction truly set them apart. We highly recommend their services for anyone planning a trip to Kashmir or anywhere else!",                                                                                                                       name: "Japnam Kaur Bindra", place: "Delhi, India"      },
+  { quote: "Traveling in Kashmir can be challenging due to unpredictable weather and road conditions, but with nomado.travel, we felt completely at ease and entire family including my kids were comfortable.",                                                                                                       name: "Pranesh Panoli",     place: "Kerala, India"     },
+  { quote: "Kashmir is definitely a beautiful place and can be enjoyed only through these kind of people who keeps customer experience as their top priority.",                                                                                                                                                        name: "Jithin Jawahar",     place: "Hyderabad, India"  },
 ];
 
 function Stars() {
@@ -82,7 +80,6 @@ export default function Testimonials() {
                 <figcaption className="mt-5 pt-4 border-t border-[#E2E8F0]">
                   <div className="font-clash text-sm font-600 text-[#083A7A]">{t.name}</div>
                   <div className="font-clash text-[10px] tracking-[0.1em] uppercase text-[#6B7280] mt-1">{t.place}</div>
-                  <div className="font-clash text-[10px] tracking-[0.15em] uppercase text-[#D97706] mt-1">{t.trip}</div>
                 </figcaption>
               </motion.figure>
             ))}
