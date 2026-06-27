@@ -124,9 +124,9 @@ export default function Experiences() {
         </div>
 
         <div className="flex justify-center gap-2 mt-6">
-          {experiences.map((_, i) => (
-            <button key={i} onClick={() => setIdx(i)} aria-label={`Slide ${i + 1}`}
-              className={`h-1 transition-all duration-300 ${i === idx ? "w-8 bg-[#D97706]" : "w-4 bg-[#CBD5E1]"}`} />
+          {Array.from({ length: Math.ceil(total / perPage) }, (_, p) => (
+            <button key={p} onClick={() => setIdx(p * perPage)} aria-label={`Page ${p + 1}`}
+              className={`h-1 transition-all duration-300 ${Math.floor(idx / perPage) === p ? "w-8 bg-[#D97706]" : "w-4 bg-[#CBD5E1]"}`} />
           ))}
         </div>
       </div>
