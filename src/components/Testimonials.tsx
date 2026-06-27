@@ -45,10 +45,11 @@ function usePerPage() {
 export default function Testimonials() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const [idx, setIdx] = useState(0);
+  const [page, setPage] = useState(0);
   const perPage = usePerPage();
-  const total = testimonials.length;
-  const shown = Array.from({ length: perPage }, (_, k) => testimonials[(idx + k) % total]);
+  const pageCount = Math.ceil(testimonials.length / perPage);
+  const safePage = Math.min(page, pageCount - 1);
+  const shown = testimonials.slice(safePage * perPage, safePage * perPage + perPage);
 
   return (
     <section ref={ref} className="bg-[#F5F8FD] py-12 md:py-16 px-6 md:px-12 lg:px-20">
@@ -64,12 +65,12 @@ export default function Testimonials() {
 
         <div className="flex items-center gap-3 md:gap-4">
           <div className="shrink-0">
-            <NavBtn dir="prev" onClick={() => setIdx(i => (i - 1 + total) % total)} />
+            <NavBtn dir="prev" onClick={() => setPage(() => (safePage - 1 + pageCount) % pageCount)} />
           </div>
           <div className={`flex-1 grid gap-5 md:gap-6 ${perPage === 1 ? "grid-cols-1" : "grid-cols-3"}`}>
           <AnimatePresence mode="wait">
             {shown.map((t, i) => (
-              <motion.figure key={`t-${idx}-${i}`}
+              <motion.figure key={`t-${safePage}-${i}`}
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4, delay: i * 0.07 }}
                 className="bg-white border border-[#EEF2F7] rounded-3xl shadow-[0_10px_30px_-15px_rgba(8,58,122,0.28)] hover:shadow-[0_18px_40px_-15px_rgba(8,58,122,0.38)] transition-shadow duration-500 p-6 md:p-7 flex flex-col">
@@ -86,14 +87,14 @@ export default function Testimonials() {
           </AnimatePresence>
           </div>
           <div className="shrink-0">
-            <NavBtn dir="next" onClick={() => setIdx(i => (i + 1) % total)} />
+            <NavBtn dir="next" onClick={() => setPage(() => (safePage + 1) % pageCount)} />
           </div>
         </div>
 
         <div className="flex justify-center gap-2 mt-6">
-          {testimonials.map((_, i) => (
-            <button key={i} onClick={() => setIdx(i)} aria-label={`Slide ${i + 1}`}
-              className={`h-1 transition-all duration-300 ${i === idx ? "w-8 bg-[#D97706]" : "w-4 bg-[#CBD5E1]"}`} />
+          {Array.from({ length: pageCount }, (_, p) => (
+            <button key={p} onClick={() => setPage(p)} aria-label={`Page ${p + 1}`}
+              className={`h-1 transition-all duration-300 ${p === safePage ? "w-8 bg-[#D97706]" : "w-4 bg-[#CBD5E1]"}`} />
           ))}
         </div>
       </div>
