@@ -5,14 +5,19 @@ import { asset } from "@/lib/asset";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const experiences = [
-  { title: "Downtown Safari",      image: "/images/downtown.jpg",    desc: "Walk the old city's lanes — mosques, Mughal terraces, the wooden bridges of the Jhelum." },
-  { title: "Mughal Gardens",       image: "/images/mughal-garden.jpg",desc: "Terraced gardens, fountains, and chinar groves built for emperors who loved beauty." },
-  { title: "Temple & Shrine Tours",image: "/images/shrine.jpg",      desc: "Ancient shrines, Sufi dargahs, and hilltop temples steeped in living devotion." },
-  { title: "Craft Safari",         image: "/images/craft.jpg",       desc: "Visit carpet weavers, Pashmina spinners, and Papier Maché artists at work in their studios." },
-  { title: "Wood Carving Ateliers",image: "/images/wood-carving.jpg",desc: "Watch master carvers transform walnut wood into heirlooms, then take a piece home." },
-  { title: "Wazwan Feast",         image: "/images/wazwan-new.jpg",  desc: "The ceremonial multi-course banquet of Kashmir, eaten together from a shared platter." },
-  { title: "Bakeries & Cafés",     image: "/images/cafe.jpg",        desc: "Girda bread at sunrise, kahwa at a lakeside café — the everyday flavours of Srinagar." },
-  { title: "Home Kitchen Visits",  image: "/images/houses-lake.jpg", desc: "Cook alongside Kashmiri families and eat as they eat — unhurried, generous, real." },
+  // ── Kashmir ──
+  { region: "Kashmir", title: "Downtown Safari",          image: "/images/downtown.jpg",     desc: "Guided walking tour through Srinagar's old city, exploring historic mosques, shrines, and bustling local bazaars." },
+  { region: "Kashmir", title: "Craft Trail",              image: "/images/craft.jpg",        desc: "Visit artisan workshops to watch papier-mâché, walnut carving, and Kashmiri shawl weaving crafted by hand." },
+  { region: "Kashmir", title: "Photo Walk",               image: "/images/oldcity.jpg",      desc: "Capture Srinagar's lanes, gardens, and lake life with a local photographer guiding light and composition." },
+  { region: "Kashmir", title: "Floating Market",          image: "/images/shikara.jpg",      desc: "Pre-dawn shikara ride to Dal Lake's vegetable market, watching farmers trade fresh produce boat-to-boat." },
+  { region: "Kashmir", title: "Hike to City Top (Mamneth)", image: "/images/mountain-lake.jpg", desc: "Moderate ridge trek above Srinagar, rewarding hikers with sunset views over Dal Lake." },
+  { region: "Kashmir", title: "Royal Feast (Wazwan)",     image: "/images/wazwan-new.jpg",   desc: "Elaborate multi-course Kashmiri banquet of slow-cooked meat dishes, shared communally in traditional style." },
+  { region: "Kashmir", title: "Sunset Shikara",           image: "/images/dal-lake.jpg",     desc: "Peaceful evening boat ride across Dal Lake as the sun sets behind the Zabarwan hills." },
+  // ── Ladakh ──
+  { region: "Ladakh",  title: "Stargazing at Hanle",      image: "/images/hanle.jpg",        desc: "Night sky viewing near India's highest observatory, under some of the darkest, clearest skies anywhere." },
+  { region: "Ladakh",  title: "Life at Turtuk",           image: "/images/turtuk.jpg",       desc: "Wander this Balti border village's apricot orchards and stone lanes along the scenic Shyok River." },
+  { region: "Ladakh",  title: "Camel Safari",             image: "/images/nubra.jpg",        desc: "Ride double-humped Bactrian camels across Hunder's cold-desert sand dunes in Nubra Valley." },
+  { region: "Ladakh",  title: "Gandal Hike",              image: "/images/kargil.jpg",       desc: "High-altitude trek likely toward Ganda La pass, offering rugged Himalayan scenery en route to Markha Valley." },
 ];
 
 function usePerPage() {
@@ -97,6 +102,9 @@ export default function Experiences() {
                     />
                   </motion.div>
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#072350] to-transparent" />
+                  <span className="absolute top-3 left-3 font-clash text-[10px] tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-[#072350]/80 backdrop-blur-sm text-[#F59E0B] border border-[#F59E0B]/30">
+                    {exp.region}
+                  </span>
                 </div>
                 <div className="bg-[#072350] px-5 md:px-6 pb-5 md:pb-6 pt-1">
                   <h3 className="font-clash text-lg md:text-xl font-700 text-[#F5F9FD] leading-tight mb-2">
