@@ -21,7 +21,7 @@ export default function Hero() {
             playsInline
             preload="metadata"
             poster={asset("/images/hero-poster.jpg")}
-            className="absolute inset-0 h-full w-full object-cover object-[25%_center] md:object-center"
+            className="absolute inset-0 h-full w-full object-cover object-center"
           >
             <source src={asset("/images/hero.webm")} type="video/webm" />
             <source src={asset("/images/hero.mp4")} type="video/mp4" />
