@@ -5,12 +5,11 @@ import { asset } from "@/lib/asset";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const posts = [
-  { tag: "Culture",  title: "A Morning in Downtown Srinagar",   excerpt: "Before the city wakes, there is a stillness in the old lanes that feels ancient and alive at once.", readTime: "5 min", image: "/images/houses-lake.jpg" },
-  { tag: "Craft",    title: "The Last Weavers of Pashmina",     excerpt: "Three generations, one loom, and a craft that takes months to master and seconds to undo.",             readTime: "7 min", image: "/images/weaving.jpg"     },
-  { tag: "Winter",   title: "When the Valley Turns to Snow",    excerpt: "Gulmarg in deep winter exists in a world the rest of Kashmir seems to forget to hurry through.",         readTime: "6 min", image: "/images/snow.jpg"        },
-  { tag: "Nature",   title: "The Forests of Pahalgam",          excerpt: "Deodar forests so dense the sunlight arrives in shafts. A silence that asks you to stay longer.",        readTime: "4 min", image: "/images/forest.jpg"      },
-  { tag: "Culinary", title: "Wazwan: A Feast of Belonging",     excerpt: "To be invited to a Wazwan is to be welcomed into a family. No menu, no choices — only abundance.",       readTime: "6 min", image: "/images/wazwan.jpg"      },
-  { tag: "Heritage", title: "The Mughal Gardens at Dusk",       excerpt: "Shalimar, Nishat, Chashme Shahi — as the light fades, they become something beyond history.",           readTime: "5 min", image: "/images/oldcity.jpg"     },
+  { title: "The Floating Market: Srinagar's Morning Ritual on Water", excerpt: "Long before the city stirs, shikaras laden with lotus stems and fresh greens glide through the mist to Dal Lake's centuries-old floating vegetable market.", image: "/images/shikara.jpg" },
+  { title: "Weavers of Pashmina: The Thread That Took a Lifetime to Learn", excerpt: "Behind unmarked doors in downtown Srinagar sits a craft so demanding that a single shawl can take a year — spun, woven, and embroidered entirely by hand.", image: "/images/weaving.jpg" },
+  { title: "The Royal Feast: Inside Kashmir's Legendary Wazwan", excerpt: "A single copper trami, shared between four, piled with rice and slow-cooked meat. Inside the multi-course ceremony that commands every Kashmiri wedding.", image: "/images/wazwan-new.jpg" },
+  { title: "Star Gazing at Hanle: Where India's Sky Is at Its Darkest", excerpt: "Past the last patch of cell signal, at 4,500 metres, lies India's first Dark Sky Reserve — where the Milky Way stretches from one horizon to the other.", image: "/images/stargazing.jpg" },
+  { title: "Downtown Safari: Getting Lost in Srinagar's Old City", excerpt: "Cross the Jhelum into the old city — seven wooden bridges, centuries-old shrines, and craft lanes where Srinagar still actually lives.", image: "/images/downtown.jpg" },
 ];
 
 function NavBtn({ dir, onClick }: { dir: "prev" | "next"; onClick: () => void }) {
@@ -37,10 +36,11 @@ function usePerPage() {
 export default function Journal() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const [idx, setIdx] = useState(0);
+  const [page, setPage] = useState(0);
   const perPage = usePerPage();
-  const total = posts.length;
-  const shown = Array.from({ length: perPage }, (_, k) => posts[(idx + k) % total]);
+  const pageCount = Math.ceil(posts.length / perPage);
+  const safePage = Math.min(page, pageCount - 1);
+  const shown = posts.slice(safePage * perPage, safePage * perPage + perPage);
 
   return (
     <section id="journal" ref={ref} className="bg-white py-12 md:py-16 px-6 md:px-12 lg:px-20">
@@ -56,12 +56,12 @@ export default function Journal() {
 
         <div className="flex items-stretch gap-3 md:gap-4">
           <div className="shrink-0 flex items-center">
-            <NavBtn dir="prev" onClick={() => setIdx(i => (i - 1 + total) % total)} />
+            <NavBtn dir="prev" onClick={() => setPage(() => (safePage - 1 + pageCount) % pageCount)} />
           </div>
           <div className={`flex-1 grid gap-6 md:gap-8 ${perPage === 1 ? "grid-cols-1" : "grid-cols-3"}`}>
           <AnimatePresence mode="wait">
             {shown.map((post, i) => (
-              <motion.article key={`${idx}-${i}`}
+              <motion.article key={`${safePage}-${i}`}
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4, delay: i * 0.07 }}
                 className="group">
@@ -78,14 +78,14 @@ export default function Journal() {
           </AnimatePresence>
           </div>
           <div className="shrink-0 flex items-center">
-            <NavBtn dir="next" onClick={() => setIdx(i => (i + 1) % total)} />
+            <NavBtn dir="next" onClick={() => setPage(() => (safePage + 1) % pageCount)} />
           </div>
         </div>
 
         <div className="flex justify-center gap-2 mt-6">
-          {posts.map((_, i) => (
-            <button key={i} onClick={() => setIdx(i)} aria-label={`Slide ${i + 1}`}
-              className={`h-1 transition-all duration-300 ${i === idx ? "w-8 bg-[#D97706]" : "w-4 bg-[#CBD5E1]"}`} />
+          {Array.from({ length: pageCount }, (_, p) => (
+            <button key={p} onClick={() => setPage(p)} aria-label={`Page ${p + 1}`}
+              className={`h-1 transition-all duration-300 ${p === safePage ? "w-8 bg-[#D97706]" : "w-4 bg-[#CBD5E1]"}`} />
           ))}
         </div>
       </div>
