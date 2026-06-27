@@ -62,20 +62,13 @@ function RegionTile({ region, onClick, inView, delay }: { region: Region; onClic
 
         {/* Content */}
         <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10 lg:p-12">
-          <h3 className="font-clash text-[clamp(2.4rem,4.5vw,4rem)] font-600 text-[#F5F9FD] leading-none mb-6">
-            {region.name}
-          </h3>
-
-          {/* CTA */}
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 border border-[#D97706]/50 group-hover:border-[#D97706] group-hover:bg-[#D97706]/15 transition-all duration-500">
-              <svg viewBox="0 0 20 20" className="w-4 h-4 text-[#F59E0B] transition-transform duration-500 group-hover:translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10 4v12M4 10l6 6 6-6" />
-              </svg>
-            </div>
-            <span className="font-clash text-[11px] tracking-[0.3em] uppercase text-[#F59E0B]">
-              Tap to expand
-            </span>
+          <div className="flex items-center gap-4">
+            <h3 className="font-clash text-[clamp(2.4rem,4.5vw,4rem)] font-600 text-[#F5F9FD] leading-none">
+              {region.name}
+            </h3>
+            <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-8 md:h-8 shrink-0 text-[#F59E0B] transition-transform duration-500 group-hover:translate-x-1.5" fill="none" stroke="currentColor" strokeWidth="2.2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 6l6 6-6 6" />
+            </svg>
           </div>
         </div>
       </div>

@@ -19,6 +19,7 @@ export default function Hero() {
             loop
             muted
             playsInline
+            preload="metadata"
             poster={asset("/images/hero-poster.jpg")}
             className="absolute inset-0 h-full w-full object-cover object-[25%_center] md:object-center"
           >
