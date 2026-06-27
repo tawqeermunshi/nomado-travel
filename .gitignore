@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+NEXT_PUBLIC_SHEET_URL=...
+
+# raw hero video source (encoded mp4/webm are committed)
+public/images/*.mov

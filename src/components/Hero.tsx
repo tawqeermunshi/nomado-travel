@@ -1,6 +1,5 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import Image from "next/image";
 import { asset } from "@/lib/asset";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
@@ -32,13 +31,17 @@ export default function Hero() {
     <section ref={ref} className="relative h-[80vh] w-full overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0 h-[105%]">
         <div className="relative h-full w-full">
-          <Image
-            src={asset("/images/2.jpeg")}
-            alt="Houseboats on Dal Lake against snow-capped mountains, Srinagar"
-            fill
-            priority
-            className="object-cover object-[25%_center] md:object-center"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={asset("/images/hero-poster.jpg")}
+            className="absolute inset-0 h-full w-full object-cover object-[25%_center] md:object-center"
+          >
+            <source src={asset("/images/hero.webm")} type="video/webm" />
+            <source src={asset("/images/hero.mp4")} type="video/mp4" />
+          </video>
         </div>
       </motion.div>
 
