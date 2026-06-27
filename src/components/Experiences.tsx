@@ -12,9 +12,9 @@ const experiences = [
   { region: "Kashmir", title: "Floating Market",          image: "/images/shikara.jpg",      desc: "Pre-dawn shikara ride to Dal Lake's vegetable market, watching farmers trade fresh produce boat-to-boat." },
   { region: "Kashmir", title: "Hike to City Top (Mamneth)", image: "/images/mountain-lake.jpg", desc: "Moderate ridge trek above Srinagar, rewarding hikers with sunset views over Dal Lake." },
   { region: "Kashmir", title: "Royal Feast (Wazwan)",     image: "/images/wazwan-new.jpg",   desc: "Elaborate multi-course Kashmiri banquet of slow-cooked meat dishes, shared communally in traditional style." },
-  { region: "Kashmir", title: "Sunset Shikara",           image: "/images/dal-lake.jpg",     desc: "Peaceful evening boat ride across Dal Lake as the sun sets behind the Zabarwan hills." },
+  { region: "Kashmir", title: "Sunset Shikara",           image: "/images/sunset-shikara.jpg", desc: "Peaceful evening boat ride across Dal Lake as the sun sets behind the Zabarwan hills." },
   // ── Ladakh ──
-  { region: "Ladakh",  title: "Stargazing at Hanle",      image: "/images/hanle.jpg",        desc: "Night sky viewing near India's highest observatory, under some of the darkest, clearest skies anywhere." },
+  { region: "Ladakh",  title: "Stargazing at Hanle",      image: "/images/stargazing.jpg",   desc: "Night sky viewing near India's highest observatory, under some of the darkest, clearest skies anywhere." },
   { region: "Ladakh",  title: "Life at Turtuk",           image: "/images/turtuk.jpg",       desc: "Wander this Balti border village's apricot orchards and stone lanes along the scenic Shyok River." },
   { region: "Ladakh",  title: "Camel Safari",             image: "/images/camel.jpg",        desc: "Ride double-humped Bactrian camels across Hunder's cold-desert sand dunes in Nubra Valley." },
   { region: "Ladakh",  title: "Gandal Hike",              image: "/images/kargil.jpg",       desc: "High-altitude trek likely toward Ganda La pass, offering rugged Himalayan scenery en route to Markha Valley." },
