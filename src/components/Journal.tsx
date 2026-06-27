@@ -65,8 +65,7 @@ export default function Journal() {
                     </motion.div>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#083A7A]/50 to-transparent" />
                   </div>
-                  <h3 className="font-clash text-lg font-500 text-[#083A7A] leading-snug mb-2 group-hover:text-[#D97706] transition-colors duration-300">{post.title}</h3>
-                  <p className="font-cormorant italic text-[#4B5563] text-sm leading-relaxed mb-3">{post.excerpt}</p>
+                  <h3 className="font-clash text-lg font-500 text-[#083A7A] leading-snug mb-3 group-hover:text-[#D97706] transition-colors duration-300">{post.title}</h3>
                   <span className="inline-flex items-center gap-1.5 font-clash text-[11px] tracking-[0.18em] uppercase text-[#D97706] group-hover:gap-2.5 transition-all duration-300">
                     Read story
                     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" /></svg>
