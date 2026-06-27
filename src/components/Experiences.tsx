@@ -74,7 +74,7 @@ export default function Experiences() {
 
         <div className="flex items-center gap-3 md:gap-4">
           <div className="shrink-0">
-            <NavBtn dir="prev" onClick={() => setIdx(i => (i - 1 + total) % total)} />
+            <NavBtn dir="prev" onClick={() => setIdx(i => (i - perPage + total) % total)} />
           </div>
           <div className={`flex-1 grid gap-5 md:gap-6 ${perPage === 1 ? "grid-cols-1" : "grid-cols-3"}`}>
           <AnimatePresence mode="wait">
@@ -119,7 +119,7 @@ export default function Experiences() {
           </AnimatePresence>
           </div>
           <div className="shrink-0">
-            <NavBtn dir="next" onClick={() => setIdx(i => (i + 1) % total)} />
+            <NavBtn dir="next" onClick={() => setIdx(i => (i + perPage) % total)} />
           </div>
         </div>
 
