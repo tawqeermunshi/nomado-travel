@@ -66,9 +66,11 @@ function RegionTile({ region, onClick, inView, delay }: { region: Region; onClic
             <h3 className="font-clash text-[clamp(2.4rem,4.5vw,4rem)] font-600 text-[#F5F9FD] leading-none">
               {region.name}
             </h3>
-            <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-8 md:h-8 shrink-0 text-[#F59E0B] transition-transform duration-500 group-hover:translate-x-1.5" fill="none" stroke="currentColor" strokeWidth="2.2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 6l6 6-6 6" />
-            </svg>
+            <span className="shrink-0 w-11 h-11 rounded-full bg-white border border-[#E8EDF3] shadow-md flex items-center justify-center text-[#475569] transition-transform duration-500 group-hover:translate-x-1.5">
+              <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 6l6 6-6 6" />
+              </svg>
+            </span>
           </div>
         </div>
       </div>
