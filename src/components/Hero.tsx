@@ -34,7 +34,7 @@ export default function Hero() {
 
       <motion.div
         style={{ y: textY }}
-        className="absolute inset-0 flex flex-col items-center justify-center pt-16 px-6 md:px-16 text-center"
+        className="absolute inset-0 flex flex-col items-center justify-end pb-16 md:pb-20 px-6 md:px-16 text-center"
       >
         <div className="max-w-3xl w-full">
           <motion.div
