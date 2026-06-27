@@ -99,10 +99,10 @@ export default function Experiences() {
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#072350] to-transparent" />
                 </div>
                 <div className="bg-[#072350] px-5 md:px-6 pb-5 md:pb-6 pt-1">
-                  <h3 className="font-clash text-lg md:text-xl font-600 text-[#F5F9FD] leading-tight mb-2">
+                  <h3 className="font-clash text-lg md:text-xl font-700 text-[#F5F9FD] leading-tight mb-2">
                     {exp.title}
                   </h3>
-                  <p className="font-cormorant italic text-[#C9D9E8] text-sm md:text-base leading-relaxed">
+                  <p className="text-[#C9D9E8] text-sm md:text-base leading-relaxed">
                     {exp.desc}
                   </p>
                 </div>

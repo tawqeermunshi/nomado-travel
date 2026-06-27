@@ -62,12 +62,9 @@ function RegionTile({ region, onClick, inView, delay }: { region: Region; onClic
 
         {/* Content */}
         <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10 lg:p-12">
-          <h3 className="font-clash text-[clamp(2.4rem,4.5vw,4rem)] font-600 text-[#F5F9FD] leading-none mb-4">
+          <h3 className="font-clash text-[clamp(2.4rem,4.5vw,4rem)] font-600 text-[#F5F9FD] leading-none mb-6">
             {region.name}
           </h3>
-          <p className="font-cormorant italic text-[#C9D9E8]/75 text-base md:text-lg leading-relaxed max-w-xs mb-8" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.95)" }}>
-            {region.desc}
-          </p>
 
           {/* CTA */}
           <div className="flex items-center gap-3">
