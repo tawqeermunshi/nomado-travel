@@ -86,7 +86,7 @@ function ExpandedRegion({ region, onClose }: { region: Region; onClose: () => vo
       transition={{ duration: 0.45 }}
       className="relative w-full overflow-hidden bg-white"
     >
-      <div className="relative z-10 border-l-2 border-[#D97706]/70 pl-5 md:pl-8 pt-1 pb-6">
+      <div className="relative z-10 pt-1 pb-6">
         {/* Header */}
         <div className="flex items-start justify-between mb-10 md:mb-12">
           <motion.div
@@ -94,13 +94,6 @@ function ExpandedRegion({ region, onClose }: { region: Region; onClose: () => vo
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <button
-              onClick={onClose}
-              className="flex items-center gap-1.5 font-clash text-[10px] md:text-[11px] tracking-[0.25em] uppercase text-[#6B7280] hover:text-[#D97706] transition-colors duration-300 mb-3"
-            >
-              <svg viewBox="0 0 20 20" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.8"><path strokeLinecap="round" strokeLinejoin="round" d="M12 16l-6-6 6-6" /></svg>
-              All Regions
-            </button>
             <h3 className="font-clash text-[clamp(2.4rem,5vw,4.5rem)] font-600 text-[#083A7A] leading-none">
               {region.name}
             </h3>
