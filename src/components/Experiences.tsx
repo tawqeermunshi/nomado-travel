@@ -103,7 +103,7 @@ export default function Experiences() {
                     />
                   </motion.div>
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#072350] to-transparent" />
-                  <span className="absolute top-3 left-3 font-clash text-[10px] tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-white text-[#1F2937]">
+                  <span className="absolute top-3 left-3 font-clash font-600 text-[10px] tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-white text-[#1F2937]">
                     {exp.region}
                   </span>
                 </div>
